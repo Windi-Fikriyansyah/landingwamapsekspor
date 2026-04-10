@@ -5,7 +5,11 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Wamaps - Tools Scrape google maps &amp; WhatsApp Broadcast</title>
+    <title>Wamaps - Tools Scrape Google Maps &amp; WhatsApp Broadcast</title>
+    <meta name="description" content="Wamaps adalah alat otomatisasi lead generation terbaik untuk mencari data di Google Maps dan mengirim pesan WhatsApp Broadcast secara massal dengan mudah.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
         rel="stylesheet" />
@@ -20,7 +24,7 @@
                 extend: {
                     "colors": {
                         "primary-fixed-dim": "#a2d2ff",
-                        "on-surface-variant": "#444651",
+                        "on-surface-variant": "#373942",
                         "on-primary-fixed-variant": "#004b73",
                         "background": "#f7f9fb",
                         "tertiary": "#002e44",
@@ -136,10 +140,11 @@
 
 <body class="bg-surface text-on-background antialiased">
     <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
+    <header>
+        <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
         <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
             <a href="/" class="flex items-center text-xl font-bold tracking-tight text-primary dark:text-white">
-                <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <rect width="32" height="32" rx="8" fill="#145efc" />
                     <circle cx="16" cy="16" r="9" stroke="white" stroke-width="2.5" />
                     <circle cx="16" cy="16" r="4.5" stroke="white" stroke-width="2.5" />
@@ -159,9 +164,11 @@
                 class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold scale-95 active:duration-150 transition-all hover:bg-primary-container">Beli
                 Sekarang</a>
         </div>
-    </nav>
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20">
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-8">
                 <span
@@ -181,7 +188,7 @@
                     <a href="{{ route('checkout') }}"
                         class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-all">
                         Beli Sekarang
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                         </svg>
                     <a href="#features"
@@ -239,7 +246,7 @@
                         class="play-overlay absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-300">
                         <div
                             class="w-16 h-16 md:w-20 md:h-20 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-2xl scale-90 group-hover:scale-100 transition-transform duration-300 border-4 border-white/20">
-                            <svg class="w-10 h-10 md:w-12 md:h-12 fill-current ml-1" viewBox="0 0 24 24">
+                            <svg class="w-10 h-10 md:w-12 md:h-12 fill-current ml-1" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M8 5v14l11-7z" />
                             </svg>
                         </div>
@@ -247,8 +254,10 @@
                 </div>
             </div>
         </div>
-        <!-- Use Case / Target Audience -->
-        <section class="py-16 bg-white border-y border-slate-50">
+    </section>
+
+    <!-- Use Case / Target Audience -->
+    <section class="py-16 bg-white border-y border-slate-50">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-2xl md:text-3xl font-bold text-on-surface tracking-tight">Siapa yang Cocok Pakai
@@ -425,7 +434,8 @@
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                         <div
                             class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden flex items-center justify-center border border-slate-100 dark:border-slate-700">
-                            <img src="{{asset('searchleads.png')}}" alt="Auto Scraping"
+                            <img src="{{asset('searchleads.png')}}" alt="Auto Scraping Google Maps"
+                                loading="lazy" decoding="async"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -439,7 +449,8 @@
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                         <div
                             class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden flex items-center justify-center border border-slate-100 dark:border-slate-700">
-                            <img src="{{asset('dataleads.png')}}" alt="Database Leads"
+                            <img src="{{asset('dataleads.png')}}" alt="Database Leads Rapi & Valid"
+                                loading="lazy" decoding="async"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -453,7 +464,8 @@
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                         <div
                             class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden flex items-center justify-center border border-slate-100 dark:border-slate-700">
-                            <img src="{{asset('broadcast.png')}}" alt="WhatsApp Broadcast"
+                            <img src="{{asset('broadcast.png')}}" alt="WhatsApp Broadcast Otomatis"
+                                loading="lazy" decoding="async"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -479,7 +491,8 @@
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                         <div
                             class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden flex items-center justify-center border border-slate-100 dark:border-slate-700">
-                            <img src="{{asset('bonus.png')}}" alt="Auto Post Facebook"
+                            <img src="{{asset('bonus.png')}}" alt="Auto Post ke Banyak Grup Facebook"
+                                loading="lazy" decoding="async"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -494,6 +507,7 @@
                         <div
                             class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden flex items-center justify-center border border-slate-100 dark:border-slate-700">
                             <img src="{{asset('pesan.png')}}" alt="Multiple Message Templates"
+                                loading="lazy" decoding="async"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -570,9 +584,7 @@
                 </div>
             </div>
         </section>
-    </section>
-    <!-- Testimonials -->
-    <section class="py-24 bg-surface-container-lowest">
+        <section class="py-24 bg-surface-container-lowest">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-1 space-y-6">
@@ -753,10 +765,13 @@
                                 </div>
                                 <span>Free Update Selamanya</span>
                             </li>
+                        </ul>
+                        <div class="mt-6">
                             <a href="{{ route('checkout') }}"
                                 class="w-full py-6 bg-white hover:bg-slate-100 text-primary rounded-2xl text-xl font-black shadow-2xl shadow-black/20 transition-all hover:-translate-y-1 active:scale-[0.98] flex items-center justify-center">
                                 Beli Sekarang
                             </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -903,6 +918,7 @@
             </div>
         </div>
     </section>
+</main>
 
     <!-- Footer -->
     <footer class="bg-slate-50 dark:bg-slate-950 py-20 border-t border-slate-200/60 pb-32 md:pb-20">
@@ -911,7 +927,7 @@
                 <!-- Brand Info -->
                 <div class="space-y-6">
                     <div class="flex items-center text-2xl font-black text-primary">
-                        <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <rect width="32" height="32" rx="8" fill="#145efc" />
                             <circle cx="16" cy="16" r="9" stroke="white" stroke-width="2.5" />
                             <circle cx="16" cy="16" r="4.5" stroke="white" stroke-width="2.5" />
@@ -931,7 +947,7 @@
 
                 <!-- Fitur -->
                 <div>
-                    <h4 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-xs">Fitur Utama</h4>
+                    <h3 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-xs">Fitur Utama</h3>
                     <ul class="space-y-4">
                         <li><a href="#features"
                                 class="text-on-surface-variant hover:text-primary text-sm transition-colors">Auto Scrape
@@ -954,7 +970,7 @@
 
                 <!-- Produk -->
                 <div>
-                    <h4 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-xs">Produk</h4>
+                    <h3 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-xs">Produk</h3>
                     <ul class="space-y-4">
                         <li><a href="#pricing"
                                 class="text-on-surface-variant hover:text-primary text-sm transition-colors">Harga</a>
@@ -965,7 +981,7 @@
 
                 <!-- Bantuan -->
                 <div>
-                    <h4 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-xs">Bantuan & Kontak</h4>
+                    <h3 class="font-bold text-on-surface mb-6 uppercase tracking-wider text-xs">Bantuan & Kontak</h3>
                     <ul class="space-y-4">
                         <li>
                             <a href="https://wa.me/6289678386070"
