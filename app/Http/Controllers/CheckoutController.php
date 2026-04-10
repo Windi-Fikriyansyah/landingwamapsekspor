@@ -120,4 +120,24 @@ class CheckoutController extends Controller
             'status' => $transaction ? $transaction->status : 'NOT_FOUND'
         ]);
     }
+
+    public function downloadQris($merchant_ref)
+    {
+        $transaction = Transaction::where('merchant_ref', $merchant_ref)->firstOrFail();
+        
+        if (!$transaction->payment_url || $transaction->method !== 'QRIS') {
+            return back()->with('error', 'URL QRIS tidak ditemukan.');
+        }
+
+        try {
+            $imageContent = \Illuminate\Support\Facades\Http::get($transaction->payment_url)->body();
+            
+            return response()->streamDownload(function () use ($imageContent) {
+                echo $imageContent;
+            }, 'QRIS-Wamaps-' . $merchant_ref . '.png');
+        } catch (\Exception $e) {
+            // Jika gagal di-proxy, redirect saja URL-nya ke page aslinya
+            return redirect($transaction->payment_url);
+        }
+    }
 }

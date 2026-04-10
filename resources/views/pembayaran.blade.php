@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
         rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
         rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
@@ -118,7 +118,12 @@
         class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-surface-variant/20 shadow-sm">
         <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
             <div class="text-2xl font-black tracking-tighter text-primary flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-3xl">api</span>
+                <svg class="w-8 h-8 mr-1" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#145efc" />
+                    <circle cx="16" cy="16" r="9" stroke="white" stroke-width="2.5" />
+                    <circle cx="16" cy="16" r="4.5" stroke="white" stroke-width="2.5" />
+                    <circle cx="16" cy="16" r="1.5" fill="white" />
+                </svg>
                 Wamaps
             </div>
             <div class="hidden md:flex items-center gap-6">
@@ -159,9 +164,14 @@
                     <div class="bg-white p-8 rounded-[2rem] border border-outline-variant/30 shadow-xl shadow-primary/5 text-center flex flex-col items-center justify-center">
                         @if($transaction->method === 'QRIS')
                             <p class="text-[10px] uppercase font-black text-primary tracking-[0.3em] mb-6">QRIS DIGITAL PAYMENT</p>
-                            <div class="bg-white p-4 rounded-3xl border-4 border-surface-container-low shadow-inner mb-6">
+                            <div class="bg-white p-4 rounded-3xl border-4 border-surface-container-low shadow-inner mb-4">
                                 <img alt="QRIS payment code" class="w-56 h-56 md:w-64 md:h-64" src="{{ $transaction->payment_url }}" />
                             </div>
+                            <a href="{{ route('qris.download', $transaction->merchant_ref) }}" 
+                                class="inline-flex items-center justify-center px-6 py-2.5 mb-6 bg-surface-container-low text-primary font-bold rounded-xl hover:bg-surface-container-high active:scale-95 transition-all text-sm gap-2 shadow-sm border border-primary/10">
+                                <span class="material-symbols-outlined text-base">download</span>
+                                Unduh QRIS
+                            </a>
                             <p class="text-[11px] font-bold text-on-surface-variant max-w-[280px] leading-relaxed">Scan QRIS di atas menggunakan aplikasi e-wallet <strong>(GOPAY, OVO, DANA, dll)</strong> atau <strong>M-Banking Anda</strong>.</p>
                         @else
                             <div class="py-12 flex flex-col items-center">
@@ -211,19 +221,14 @@
         </div>
     </main>
 
-    <footer class="bg-white border-t border-surface-container py-8 mt-auto">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-2 opacity-50">
-                    <span class="material-symbols-outlined text-sm">api</span>
-                    <span class="text-xs font-black tracking-tighter uppercase">Wamaps Cloud</span>
-                </div>
-                <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-60">
-                    <a href="#" class="hover:text-primary transition-colors">Bantuan</a>
-                    <a href="#" class="hover:text-primary transition-colors">Syarat & Ketentuan</a>
-                    <a href="#" class="hover:text-primary transition-colors">Kebijakan Privasi</a>
-                </div>
-                <p class="text-[10px] font-bold text-on-surface-variant opacity-40">© 2026 Wamaps. All rights reserved.</p>
+    <footer class="bg-white border-t border-surface-container py-10 mt-auto">
+        <div
+            class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-on-surface-variant text-sm">
+            <span>© 2026 Wamaps. Semua Hak Dilindungi.</span>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                <a class="hover:text-primary transition-colors" href="#">Support</a>
             </div>
         </div>
     </footer>

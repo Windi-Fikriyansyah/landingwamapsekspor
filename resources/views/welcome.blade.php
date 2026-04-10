@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
         rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
@@ -101,6 +101,7 @@
         .glass-nav {
             backdrop-filter: blur(20px);
         }
+
         .material-symbols-outlined {
             display: inline-block;
             line-height: 1;
@@ -120,7 +121,15 @@
     <!-- TopNavBar -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
         <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
-            <div class="text-xl font-bold tracking-tight text-primary dark:text-white">Wamaps</div>
+            <div class="flex items-center text-xl font-bold tracking-tight text-primary dark:text-white">
+                <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#145efc" />
+                    <circle cx="16" cy="16" r="9" stroke="white" stroke-width="2.5" />
+                    <circle cx="16" cy="16" r="4.5" stroke="white" stroke-width="2.5" />
+                    <circle cx="16" cy="16" r="1.5" fill="white" />
+                </svg>
+                Wamaps
+            </div>
             <div class="hidden md:flex items-center space-x-8">
                 <a class="text-primary dark:text-primary-fixed-dim font-semibold border-b-2 border-primary hover:text-primary-container transition-colors"
                     href="#features">Features</a>
@@ -152,17 +161,16 @@
                     coding, dalam hitungan menit.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="{{ route('checkout') }}"
-                                class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-all">
-                                Beli Sekarang
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
-                                </svg>
-                            </a>
-                    <button
-                        class="bg-surface-container-low text-primary px-8 py-4 rounded-xl text-lg font-bold hover:bg-surface-container-high transition-all">
-                        Lihat Demo
-                    </button>
+                    <a href="{{ route('checkout') }}"
+                        class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-all">
+                        Beli Sekarang
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                        </svg>
+                    <a href="#features"
+                        class="bg-surface-container-low text-primary px-8 py-4 rounded-xl text-lg flex items-center justify-center font-bold hover:bg-surface-container-high transition-all">
+                        Lihat Fitur
+                    </a>
                 </div>
                 <div class="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 text-[10px] sm:text-sm font-bold">
                     <div
@@ -885,7 +893,15 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Brand Info -->
                 <div class="space-y-6">
-                    <h2 class="text-2xl font-black text-primary">Wamaps</h2>
+                    <div class="flex items-center text-2xl font-black text-primary">
+                        <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="#145efc" />
+                            <circle cx="16" cy="16" r="9" stroke="white" stroke-width="2.5" />
+                            <circle cx="16" cy="16" r="4.5" stroke="white" stroke-width="2.5" />
+                            <circle cx="16" cy="16" r="1.5" fill="white" />
+                        </svg>
+                        Wamaps
+                    </div>
                     <p class="text-on-surface-variant text-sm leading-relaxed">
                         Wamaps adalah platform pintar untuk mengambil data dari Google Maps dan memudahkan Anda
                         mengelola komunikasi
