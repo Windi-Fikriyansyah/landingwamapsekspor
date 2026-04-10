@@ -121,7 +121,7 @@
     <!-- TopNavBar -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
         <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
-            <div class="flex items-center text-xl font-bold tracking-tight text-primary dark:text-white">
+            <a href="/" class="flex items-center text-xl font-bold tracking-tight text-primary dark:text-white">
                 <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32" height="32" rx="8" fill="#145efc" />
                     <circle cx="16" cy="16" r="9" stroke="white" stroke-width="2.5" />
@@ -129,7 +129,7 @@
                     <circle cx="16" cy="16" r="1.5" fill="white" />
                 </svg>
                 Wamaps
-            </div>
+            </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a class="text-primary dark:text-primary-fixed-dim font-semibold border-b-2 border-primary hover:text-primary-container transition-colors"
                     href="#features">Features</a>

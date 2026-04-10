@@ -117,7 +117,7 @@
     <nav
         class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-surface-variant/20 shadow-sm">
         <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
-            <div class="text-2xl font-black tracking-tighter text-primary flex items-center gap-2">
+            <a href="/" class="text-2xl font-black tracking-tighter text-primary flex items-center gap-2">
                 <svg class="w-8 h-8 mr-1" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32" height="32" rx="8" fill="#145efc" />
                     <circle cx="16" cy="16" r="9" stroke="white" stroke-width="2.5" />
@@ -125,7 +125,7 @@
                     <circle cx="16" cy="16" r="1.5" fill="white" />
                 </svg>
                 Wamaps
-            </div>
+            </a>
             <div class="hidden md:flex items-center gap-6">
                 <div class="flex items-center gap-2 text-[10px] font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full border border-green-100 uppercase tracking-widest">
                     <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
