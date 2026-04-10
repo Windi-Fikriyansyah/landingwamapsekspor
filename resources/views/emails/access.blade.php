@@ -59,7 +59,7 @@
 
         <p>Silakan login melalui tombol di bawah ini:</p>
         <p style="text-align: center;">
-            <a href="{{ url('/login') }}" class="btn">Login ke Dashboard</a>
+            <a href="https://wamaps.myxyzz.online/login" class="btn">Login ke Dashboard</a>
         </p>
 
         <p>Setelah login, kami sangat menyarankan Anda untuk segera merubah password demi keamanan akun.</p>
