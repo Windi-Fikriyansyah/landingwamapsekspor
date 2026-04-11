@@ -160,8 +160,12 @@
             <!-- Professional Header -->
             <div class="text-center mb-8">
                 <h1 class="text-3xl md:text-5xl font-black text-on-surface mb-3 tracking-tight">Menunggu Pembayaran</h1>
-                <p class="text-on-surface-variant text-sm md:text-base font-medium max-w-lg mx-auto leading-relaxed">
-                    Silakan pindai kode QRIS atau selesaikan instruksi pembayaran di bawah ini untuk aktivasi instan.
+                <p class="text-on-surface-variant text-sm md:text-base font-medium max-w-xl mx-auto leading-relaxed">
+                    @if($transaction->method === 'QRIS')
+                        Silakan pindai kode QRIS di bawah ini melalui aplikasi e-wallet atau M-Banking Anda untuk aktivasi instan.
+                    @else
+                        Silakan selesaikan pembayaran ke nomor Virtual Account atau nomor pembayaran di bawah ini untuk aktivasi instan.
+                    @endif
                 </p>
             </div>
 
