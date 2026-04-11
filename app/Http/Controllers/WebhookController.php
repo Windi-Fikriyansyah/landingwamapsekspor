@@ -15,30 +15,25 @@ class WebhookController extends Controller
 {
     public function handle(Request $request)
     {
-        // IP Whitelist check 
-        $allowed_ips = ['45.158.126.118'];
-        if (config('app.env') === 'production' && !in_array($request->ip(), $allowed_ips)) {
-            return response()->json(['status' => false, 'message' => 'Unauthorized IP'], 403);
-        }
-
         $payload = $request->all();
-        $status = strtolower($payload['status'] ?? '');
         Log::info("WijayaPay Webhook Received: ", $payload);
 
         $merchant_id = config('services.wijayapay.merchant_id');
         $api_key = config('services.wijayapay.api_key');
-        
+
         // Data is inside 'data' key according to WijayaPay sample
         $data = $payload['data'] ?? [];
-        $merchant_ref = $data['ref_id'] ?? '';
+        $merchant_ref = $data['ref_id'] ?? $payload['ref_id'] ?? '';
+
+        // Status might be at top level or inside data
+        $status = strtolower($payload['status'] ?? $data['status'] ?? '');
 
         // Verify Signature
-        $received_signature = $request->header('X-Signature');
+        $received_signature = $request->header('X-Signature') ?? $payload['signature'] ?? '';
         $expected_signature = md5($merchant_id . $api_key . $merchant_ref);
 
         if ($received_signature !== $expected_signature) {
-             Log::warning("WijayaPay Webhook: Signature mismatch for Order $merchant_ref. Expected: $expected_signature, Received: $received_signature");
-             // return response()->json(['status' => false, 'message' => 'Invalid signature'], 403);
+            Log::warning("WijayaPay Webhook: Signature mismatch for Order $merchant_ref. Expected: $expected_signature, Received: $received_signature");
         }
 
         $transaction = Transaction::where('merchant_ref', $merchant_ref)->first();
