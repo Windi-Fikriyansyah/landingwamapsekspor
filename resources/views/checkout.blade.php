@@ -188,13 +188,13 @@
                                 Lengkap</label>
                             <input
                                 class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder-on-surface-variant/50"
-                                id="full_name" name="name" placeholder="John Doe" type="text" required />
+                                id="full_name" name="name" type="text" required />
                         </div>
                         <div class="flex flex-col">
                             <label class="text-sm font-semibold text-on-surface mb-2" for="email">Email Address</label>
                             <input
                                 class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder-on-surface-variant/50"
-                                id="email" name="email" placeholder="email@contoh.com" type="email" required />
+                                id="email" name="email" type="email" required />
                         </div>
                     </div>
                 <section class="mt-10 pt-4">

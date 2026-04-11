@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\InvoiceMail;
+
 
 class CheckoutController extends Controller
 {
@@ -84,7 +87,7 @@ class CheckoutController extends Controller
         if ($response->successful() && isset($result['success']) && $result['success']) {
             $data = $result['data'];
 
-            Transaction::create([
+            $transaction = Transaction::create([
                 'merchant_ref' => $merchant_ref,
                 'customer_name' => $request->name,
                 'customer_email' => $request->email,
@@ -94,6 +97,13 @@ class CheckoutController extends Controller
                 'payment_url' => $data['qr_image'] ?? $data['checkout_url'] ?? null,
                 'method' => $request->payment_method,
             ]);
+
+            // Send Invoice Email to Customer
+            try {
+                Mail::to($transaction->customer_email)->send(new InvoiceMail($transaction));
+            } catch (\Exception $e) {
+                Log::error("Failed to send invoice email: " . $e->getMessage());
+            }
 
             return redirect()->route('pembayaran', $merchant_ref);
         }

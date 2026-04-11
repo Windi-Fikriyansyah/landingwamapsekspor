@@ -112,28 +112,29 @@
     </style>
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2691160627922371');
-    fbq('track', 'PageView');
-    fbq('track', 'AddPaymentInfo');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2691160627922371');
+        fbq('track', 'PageView');
+        fbq('track', 'AddPaymentInfo');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2691160627922371&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=2691160627922371&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
 
 <body class="bg-surface text-on-surface min-h-screen flex flex-col">
     <!-- Top Navigation (Shared Component) -->
-    <nav
-        class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-surface-variant/20 shadow-sm">
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-surface-variant/20 shadow-sm">
         <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
             <a href="/" class="text-2xl font-black tracking-tighter text-primary flex items-center gap-2">
                 <svg class="w-8 h-8 mr-1" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,7 +146,8 @@
                 Wamaps
             </a>
             <div class="hidden md:flex items-center gap-6">
-                <div class="flex items-center gap-2 text-[10px] font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full border border-green-100 uppercase tracking-widest">
+                <div
+                    class="flex items-center gap-2 text-[10px] font-bold text-green-600 bg-green-50 px-3 py-1 rounded-full border border-green-100 uppercase tracking-widest">
                     <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
                     Sistem Online
                 </div>
@@ -158,47 +160,60 @@
             <!-- Professional Header -->
             <div class="text-center mb-8">
                 <h1 class="text-3xl md:text-5xl font-black text-on-surface mb-3 tracking-tight">Menunggu Pembayaran</h1>
-                <p class="text-on-surface-variant text-sm md:text-base font-medium max-w-lg mx-auto leading-relaxed">Silakan pindai kode QRIS atau selesaikan instruksi pembayaran di bawah ini untuk aktivasi instan.</p>
+                <p class="text-on-surface-variant text-sm md:text-base font-medium max-w-lg mx-auto leading-relaxed">
+                    Silakan pindai kode QRIS atau selesaikan instruksi pembayaran di bawah ini untuk aktivasi instan.
+                </p>
             </div>
 
             <!-- Main Layout -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 <!-- Timer Status -->
                 <div class="lg:col-span-12">
-                     <div class="bg-white p-4 rounded-2xl border border-outline-variant/30 flex items-center justify-between shadow-sm">
+                    <div
+                        class="bg-white p-4 rounded-2xl border border-outline-variant/30 flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center">
                                 <span class="material-symbols-outlined text-red-600 text-lg">schedule</span>
                             </div>
                             <span class="text-sm font-bold text-on-surface">Batas Pembayaran</span>
                         </div>
-                        <span id="timer" class="text-lg font-black text-red-600 tabular-nums tracking-tighter">05:00</span>
+                        <span id="timer"
+                            class="text-lg font-black text-red-600 tabular-nums tracking-tighter">05:00</span>
                     </div>
                 </div>
 
                 <!-- Payment Area -->
                 <div class="lg:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- QRIS CARD -->
-                    <div class="bg-white p-8 rounded-[2rem] border border-outline-variant/30 shadow-xl shadow-primary/5 text-center flex flex-col items-center justify-center">
+                    <div
+                        class="bg-white p-8 rounded-[2rem] border border-outline-variant/30 shadow-xl shadow-primary/5 text-center flex flex-col items-center justify-center">
                         @if($transaction->method === 'QRIS')
-                            <p class="text-[10px] uppercase font-black text-primary tracking-[0.3em] mb-6">QRIS DIGITAL PAYMENT</p>
+                            <p class="text-[10px] uppercase font-black text-primary tracking-[0.3em] mb-6">QRIS DIGITAL
+                                PAYMENT</p>
                             <div class="bg-white p-4 rounded-3xl border-4 border-surface-container-low shadow-inner mb-4">
-                                <img alt="QRIS payment code" class="w-56 h-56 md:w-64 md:h-64" src="{{ $transaction->payment_url }}" />
+                                <img alt="QRIS payment code" class="w-56 h-56 md:w-64 md:h-64"
+                                    src="{{ $transaction->payment_url }}" />
                             </div>
-                            <a href="{{ route('qris.download', $transaction->merchant_ref) }}" 
+                            <a href="{{ route('qris.download', $transaction->merchant_ref) }}"
                                 class="inline-flex items-center justify-center px-6 py-2.5 mb-6 bg-surface-container-low text-primary font-bold rounded-xl hover:bg-surface-container-high active:scale-95 transition-all text-sm gap-2 shadow-sm border border-primary/10">
                                 <span class="material-symbols-outlined text-base">download</span>
                                 Unduh QRIS
                             </a>
-                            <p class="text-[11px] font-bold text-on-surface-variant max-w-[280px] leading-relaxed">Scan QRIS di atas menggunakan aplikasi e-wallet <strong>(GOPAY, OVO, DANA, dll)</strong> atau <strong>M-Banking Anda</strong>.</p>
+                            <p class="text-[11px] font-bold text-on-surface-variant max-w-[280px] leading-relaxed">Scan QRIS
+                                di atas menggunakan aplikasi e-wallet <strong>(GOPAY, OVO, DANA, dll)</strong> atau
+                                <strong>M-Banking Anda</strong>.
+                            </p>
                         @else
                             <div class="py-12 flex flex-col items-center">
                                 <span class="material-symbols-outlined text-7xl text-primary mb-6">account_balance</span>
-                                <p class="text-[10px] uppercase font-black text-primary tracking-[0.3em] mb-4">{{ $transaction->method }} TRANSFER</p>
+                                <p class="text-[10px] uppercase font-black text-primary tracking-[0.3em] mb-4">
+                                    {{ $transaction->method }} TRANSFER
+                                </p>
                                 <a href="{{ $transaction->payment_url }}" target="_blank"
                                     class="inline-flex items-center justify-center px-8 bg-primary text-white py-4 rounded-2xl font-black gap-3 hover:bg-primary/90 transition-all shadow-lg shadow-primary/20 group">
                                     LIHAT INSTRUKSI BAYAR
-                                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                    <span
+                                        class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                                 </a>
                             </div>
                         @endif
@@ -206,8 +221,10 @@
 
                     <!-- ORDER DETAILS CARD -->
                     <div class="space-y-6">
-                        <div class="bg-surface-container-lowest p-8 rounded-[2rem] border border-outline-variant/30 shadow-sm">
-                            <p class="text-[10px] uppercase font-black text-on-surface-variant tracking-[0.3em] mb-6">DETAIL PESANAN</p>
+                        <div
+                            class="bg-surface-container-lowest p-8 rounded-[2rem] border border-outline-variant/30 shadow-sm">
+                            <p class="text-[10px] uppercase font-black text-on-surface-variant tracking-[0.3em] mb-6">
+                                DETAIL PESANAN</p>
                             <div class="space-y-4">
                                 <div class="flex justify-between items-center py-3 border-b border-outline-variant/20">
                                     <p class="text-on-surface-variant text-xs font-bold uppercase">ID Transaksi</p>
@@ -216,10 +233,14 @@
                                 <div class="flex justify-between items-start py-3">
                                     <p class="text-on-surface-variant text-xs font-bold uppercase">Total Tagihan</p>
                                     <div class="text-right">
-                                        <p class="text-primary font-black text-3xl tracking-tighter">Rp {{ number_format($transaction->amount, 0, ',', '.') }}</p>
+                                        <p class="text-primary font-black text-3xl tracking-tighter">Rp
+                                            {{ number_format($transaction->amount, 0, ',', '.') }}
+                                        </p>
                                         <div class="flex items-center justify-end gap-1 mt-1">
-                                            <span class="material-symbols-outlined text-green-600 text-xs">verified_user</span>
-                                            <p class="text-[9px] text-green-600 font-bold uppercase tracking-widest">Aktivasi Instan</p>
+                                            <span
+                                                class="material-symbols-outlined text-green-600 text-xs">verified_user</span>
+                                            <p class="text-[9px] text-green-600 font-bold uppercase tracking-widest">
+                                                Aktivasi Instan</p>
                                         </div>
                                     </div>
                                 </div>
@@ -228,10 +249,13 @@
 
                         <!-- Trust / Support -->
                         <div class="bg-primary/5 p-6 rounded-[1.5rem] border border-primary/10 flex gap-4 items-center">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                                 <span class="material-symbols-outlined text-primary text-xl">verified_user</span>
                             </div>
-                            <p class="text-[11px] text-primary/80 font-bold leading-relaxed">Pembayaran Anda diproses secara aman. Lisensi premium akan dikirimkan ke email anda segera setelah transaksi diverifikasi.</p>
+                            <p class="text-[11px] text-primary/80 font-bold leading-relaxed">Pembayaran Anda diproses
+                                secara aman. Lisensi lifetime akan dikirimkan ke email anda segera setelah transaksi
+                                diverifikasi.</p>
                         </div>
                     </div>
                 </div>
@@ -259,7 +283,7 @@
         // Timer Logic (5 Minutes)
         let timeLeft = 300;
         const timerEl = document.getElementById('timer');
-        
+
         const countdown = setInterval(() => {
             if (timeLeft <= 0) {
                 clearInterval(countdown);
@@ -277,7 +301,7 @@
             try {
                 const response = await fetch(checkStatusUrl);
                 const data = await response.json();
-                
+
                 if (data.status === 'PAID') {
                     window.location.href = successUrl;
                 }
