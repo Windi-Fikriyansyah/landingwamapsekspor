@@ -61,6 +61,13 @@ class CheckoutController extends Controller
                 $fee_fixed = (float) $channel['fee_amount'];
                 $fee_percent = (float) $channel['fee_percent'];
                 $admin_fee = $fee_fixed + ($subtotal * ($fee_percent / 100));
+
+                // Tambahan biaya sesuai request user
+                if ($request->payment_method === 'QRIS') {
+                    $admin_fee += 200;
+                } else {
+                    $admin_fee += 500;
+                }
             }
         }
 

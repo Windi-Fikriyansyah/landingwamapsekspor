@@ -209,6 +209,13 @@
                             $fee_percent = (float) $channel['fee_percent'];
                             $subtotal = 149000;
                             $calculated_fee = $fee_fixed + ($subtotal * ($fee_percent / 100));
+                            
+                            // Tambahan biaya sesuai request user
+                            if ($channel['code'] === 'QRIS') {
+                                $calculated_fee += 200;
+                            } else {
+                                $calculated_fee += 500;
+                            }
                         @endphp
                         <label class="relative group cursor-pointer">
                             <input {{ $index === 0 ? 'checked' : '' }} class="peer sr-only" name="payment_method" value="{{ $channel['code'] }}" type="radio" 
@@ -331,7 +338,15 @@
                 const feeFixed = parseFloat(selected.dataset.feeFixed);
                 const feePercent = parseFloat(selected.dataset.feePercent);
                 
-                const fee = Math.round(feeFixed + (subtotal * (feePercent / 100)));
+                let fee = Math.round(feeFixed + (subtotal * (feePercent / 100)));
+                
+                // Tambahan biaya sesuai request user
+                if (selected.value === 'QRIS') {
+                    fee += 200;
+                } else {
+                    fee += 500;
+                }
+
                 const total = subtotal + fee;
                 
                 adminFeeEl.textContent = 'Rp ' + fee.toLocaleString('id-ID');
