@@ -41,6 +41,16 @@ class CheckoutController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'payment_method' => 'required|string',
+        ], [
+            'name.required' => 'Nama wajib diisi',
+            'name.string' => 'Nama harus berupa teks',
+            'name.max' => 'Nama maksimal 255 karakter',
+
+            'email.required' => 'Email wajib diisi',
+            'email.email' => 'Format email tidak valid',
+
+            'payment_method.required' => 'Metode pembayaran wajib dipilih',
+            'payment_method.string' => 'Metode pembayaran tidak valid',
         ]);
 
         $merchant_id = config('services.wijayapay.merchant_id');
