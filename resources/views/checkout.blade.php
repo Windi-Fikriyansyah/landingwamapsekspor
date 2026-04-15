@@ -113,21 +113,23 @@
     </style>
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2691160627922371');
-    fbq('track', 'PageView');
-    fbq('track', 'InitiateCheckout');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2691160627922371');
+        fbq('track', 'PageView');
+        fbq('track', 'InitiateCheckout');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2691160627922371&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=2691160627922371&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
 
@@ -144,11 +146,15 @@
                 </svg>
                 Wamaps
             </a>
-            <div class="flex items-center space-x-2 text-on-surface-variant">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
-                </svg>
-                <span class="text-sm font-medium">Checkout Aman</span>
+            <div class="flex flex-col items-end text-on-surface-variant">
+                <div class="flex items-center space-x-1.5">
+                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" />
+                    </svg>
+                    <span class="text-sm font-bold">Checkout Aman</span>
+                </div>
+                <span class="text-[10px] opacity-60 font-medium">Data & pembayaran terenkripsi</span>
             </div>
         </div>
     </nav>
@@ -161,158 +167,279 @@
                 <div class="lg:col-span-7 space-y-10">
                     <!-- Information Section -->
                     <div>
-                    <div class="mb-6">
-                        <h2 class="text-2xl font-bold text-primary tracking-tight">Informasi Kontak</h2>
-                        <p class="text-on-surface-variant text-sm mt-1">Lengkapi data diri untuk aktivasi akun Anda.</p>
-                    </div>
-
-                    @if ($errors->any())
-                        <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
-                            <ul class="list-disc pl-5">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-
-                    @if (session('error'))
-                        <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100" role="alert">
-                            {{ session('error') }}
-                        </div>
-                    @endif
-
-                    <div class="space-y-4">
-                        <div class="flex flex-col">
-                            <label class="text-sm font-semibold text-on-surface mb-2" for="full_name">Nama
-                                Lengkap</label>
-                            <input
-                                class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder-on-surface-variant/50"
-                                id="full_name" name="name" type="text" required />
-                        </div>
-                        <div class="flex flex-col">
-                            <label class="text-sm font-semibold text-on-surface mb-2" for="email">Email Address</label>
-                            <input
-                                class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder-on-surface-variant/50"
-                                id="email" name="email" type="email" required />
-                        </div>
-                    </div>
-                <section class="mt-10 pt-4">
-                    <div class="mb-6">
-                        <h2 class="text-2xl font-bold text-primary tracking-tight">Pilih Metode Pembayaran</h2>
-                        <p class="text-on-surface-variant text-sm mt-1">Semua transaksi dienkripsi secara aman.</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-3">
-                        @foreach($channels as $index => $channel)
-                        @php
-                            $fee_fixed = (float) $channel['fee_amount'];
-                            $fee_percent = (float) $channel['fee_percent'];
-                            $subtotal = 149000;
-                            $calculated_fee = $fee_fixed + ($subtotal * ($fee_percent / 100));
-                            
-                            // Tambahan biaya sesuai request user
-                            if ($channel['code'] === 'QRIS') {
-                                $calculated_fee += 200;
-                            } else {
-                                $calculated_fee += 500;
-                            }
-                        @endphp
-                        <label class="relative group cursor-pointer">
-                            <input {{ $index === 0 ? 'checked' : '' }} class="peer sr-only" name="payment_method" value="{{ $channel['code'] }}" type="radio" 
-                                data-fee-fixed="{{ $fee_fixed }}" data-fee-percent="{{ $fee_percent }}" />
+                        <div class="mb-6">
                             <div
-                                class="p-4 flex items-center justify-between rounded-xl bg-surface-container-lowest border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary/5 transition-all group-hover:bg-surface-container-low">
-                                <div class="flex items-center space-x-4">
-                                    <div class="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm overflow-hidden">
-                                        <img src="{{ $channel['image'] }}" alt="{{ $channel['name'] }}" class="max-w-full max-h-full object-contain">
-                                    </div>
-                                    <div>
-                                        <span class="block font-bold text-on-surface">{{ $channel['name'] }}</span>
-                                        <span class="text-xs text-on-surface-variant italic">Biaya Admin: Rp {{ number_format($calculated_fee, 0, ',', '.') }}</span>
-                                    </div>
-                                </div>
-                                <span class="material-symbols-outlined text-primary opacity-0 peer-checked:opacity-100">check_circle</span>
+                                class="bg-amber-50 border border-amber-200 text-amber-800 px-4 py-2.5 rounded-xl text-center text-sm mb-6 font-semibold shadow-sm animate-pulse">
+                                🔥 Promo terbatas! Harga akan naik setelah hari ini
                             </div>
-                        </label>
-                        @endforeach
-                    </div>
-                </section>
-                <!-- Security Badges -->
-                <div
-                    class="flex flex-wrap items-center gap-6 pt-6 opacity-60 grayscale hover:grayscale-0 transition-all">
-                    <div class="flex items-center space-x-2">
-                        <span class="material-symbols-outlined text-xl">verified_user</span>
-                        <span class="text-xs font-bold uppercase tracking-widest">SSL SECURE</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <span class="material-symbols-outlined text-xl">verified</span>
-                        <span class="text-xs font-bold uppercase tracking-widest">TRUSTED SELLER</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Right Column: Order Summary Card -->
-            <div class="lg:col-span-5 sticky top-24">
-                <div
-                    class="bg-surface-container-lowest rounded-[2.5rem] p-8 shadow-[0_20px_50px_rgba(0,119,182,0.08)] border border-outline-variant/10">
-                    <h3 class="text-xl font-extrabold text-primary mb-6 tracking-tight">Ringkasan Pesanan</h3>
-                    <div class="space-y-6">
-                        <!-- Product Item -->
-                        <div class="flex items-start justify-between pb-6 border-b border-surface-container">
-                            <div class="flex space-x-4">
-                                
-                                <div>
-                                    <h4 class="font-bold text-on-surface">Wamaps Lifetime Deal</h4>
-                                    <p class="text-sm text-on-surface-variant">Marketing Automation Suite Access</p>
-                                    <span
-                                        class="inline-block mt-2 px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider rounded">Sekali Bayar</span>
-                                </div>
-                            </div>
-                            <span class="font-bold text-on-surface">Rp 149.000</span>
+                            <h6 class="text-lg font-bold text-on-surface mb-2">Informasi Akun</h6>
                         </div>
-                        <!-- Calculations -->
-                        <div class="space-y-3">
-                            <div class="flex justify-between text-sm">
-                                <span class="text-on-surface-variant">Subtotal</span>
-                                <span class="text-on-surface font-medium">Rp 149.000</span>
+
+                        @if ($errors->any())
+                            <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                                <ul class="list-disc pl-5">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
                             </div>
-                            <div class="flex justify-between text-sm">
-                                <span class="text-on-surface-variant">Biaya Admin</span>
-                                <span class="text-primary font-medium" id="admin_fee">Rp 0</span>
+                        @endif
+
+                        @if (session('error'))
+                            <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100" role="alert">
+                                {{ session('error') }}
                             </div>
-                            <div class="flex justify-between pt-4 border-t border-surface-container">
-                                <span class="text-lg font-bold text-on-surface">Total Harga</span>
-                                <div class="text-right">
-                                    <span class="block text-2xl font-extrabold text-primary" id="total_price">Rp 149.000</span>
-                                    <span class="text-[10px] text-on-surface-variant uppercase tracking-widest">Sekali
-                                        Bayar</span>
-                                </div>
+                        @endif
+
+                        <div class="space-y-4">
+                            <div class="flex flex-col">
+                                <label class="text-sm font-semibold text-on-surface mb-2" for="full_name">Nama
+                                    Lengkap</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder-on-surface-variant/50"
+                                    id="full_name" name="name" type="text" placeholder="Untuk aktivasi akun" required />
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="text-sm font-semibold text-on-surface mb-2" for="email">Email
+                                    Address</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-xl bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 transition-all text-on-surface placeholder-on-surface-variant/50"
+                                    id="email" name="email" type="email" placeholder="Akses akan dikirim ke email ini"
+                                    required />
                             </div>
                         </div>
-                        <!-- CTA -->
-                        <button type="submit" id="submit-btn" onclick="console.log('Form Submit Triggered')"
-                            class="w-full py-4 bg-primary text-white font-bold rounded-xl text-lg hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center space-x-2 shadow-lg shadow-primary/20 relative z-30">
-                            <span>Bayar Sekarang</span>
-                            <span class="material-symbols-outlined">arrow_forward</span>
-                        </button>
-                        <p class="text-center text-[11px] text-on-surface-variant px-4 leading-relaxed">
-                            Dengan menekan tombol di atas, Anda menyetujui <a
-                                class="underline text-primary hover:text-primary/80" href="{{ route('terms') }}">Syarat &amp; Ketentuan</a>
-                            serta Kebijakan Privasi Wamaps.
-                        </p>
+                        <section class="mt-10 pt-4">
+                            <div class="mb-6">
+                                <h2 class="text-2xl font-bold text-primary tracking-tight">Pilih Metode Pembayaran</h2>
+                                <p class="text-on-surface-variant text-sm mt-1">Semua transaksi dienkripsi secara aman.
+                                </p>
+                            </div>
+                            <div class="space-y-3">
+                                @php
+                                    $qris_channel = collect($channels)->firstWhere('code', 'QRIS');
+                                    $other_channels = collect($channels)->reject(fn($c) => $c['code'] === 'QRIS');
+                                @endphp
+
+                                @if($qris_channel)
+                                    @php
+                                        $fee_fixed = (float) $qris_channel['fee_amount'];
+                                        $fee_percent = (float) $qris_channel['fee_percent'];
+                                        $subtotal = 149000;
+                                        $calculated_fee = $fee_fixed + ($subtotal * ($fee_percent / 100)) + 200;
+                                    @endphp
+                                    <label class="relative group cursor-pointer block">
+                                        <input checked class="peer sr-only" name="payment_method"
+                                            value="{{ $qris_channel['code'] }}" type="radio"
+                                            data-fee-fixed="{{ $fee_fixed }}" data-fee-percent="{{ $fee_percent }}" />
+                                        <div
+                                            class="p-4 flex items-center justify-between rounded-xl bg-surface-container-lowest border-2 border-transparent peer-checked:border-primary peer-checked:bg-primary/5 transition-all group-hover:bg-surface-container-low shadow-sm">
+                                            <div class="flex items-center space-x-4">
+                                                <div
+                                                    class="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm overflow-hidden">
+                                                    <img src="{{ $qris_channel['image'] }}"
+                                                        alt="{{ $qris_channel['name'] }}"
+                                                        class="max-w-full max-h-full object-contain">
+                                                </div>
+                                                <div>
+                                                    <span class="block font-bold text-on-surface">QRIS</span>
+                                                    <span class="text-xs text-primary font-bold block">Paling cepat &
+                                                        mudah</span>
+                                                    <span class="text-[10px] text-on-surface-variant opacity-70">Biaya
+                                                        Admin: Rp {{ number_format($calculated_fee, 0, ',', '.') }}</span>
+                                                </div>
+                                            </div>
+                                            <div class="opacity-0 peer-checked:opacity-100 transition-opacity">
+                                                <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </label>
+                                @endif
+
+                                @if($other_channels->count() > 0)
+                                    <div class="mt-4">
+                                        <details class="group">
+                                            <summary class="list-none cursor-pointer">
+                                                <div
+                                                    class="flex items-center justify-between p-4 rounded-xl border border-surface-container-high bg-white hover:bg-surface-container-lowest transition-all shadow-sm group-open:rounded-b-none group-open:border-b-transparent">
+                                                    <div class="flex items-center gap-3">
+                                                        <div
+                                                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                                                            <svg class="w-5 h-5 text-primary" fill="none"
+                                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2"
+                                                                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <span class="font-bold text-on-surface text-sm">Metode Pembayaran
+                                                            Lain</span>
+                                                    </div>
+                                                    <svg class="w-5 h-5 text-on-surface-variant transition-transform duration-300 group-open:rotate-180"
+                                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+                                                    </svg>
+                                                </div>
+                                            </summary>
+
+                                            <div
+                                                class="p-4 bg-white border border-t-0 border-surface-container-high rounded-b-xl space-y-2">
+                                                <p
+                                                    class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-3 px-1">
+                                                    Pilih Bank</p>
+                                                <div class="grid grid-cols-1 gap-2">
+                                                    @foreach($other_channels as $channel)
+                                                        @php
+                                                            $fee_fixed = (float) $channel['fee_amount'];
+                                                            $fee_percent = (float) $channel['fee_percent'];
+                                                            $subtotal = 149000;
+                                                            $calculated_fee = $fee_fixed + ($subtotal * ($fee_percent / 100)) + 500;
+                                                        @endphp
+                                                        <label class="relative group cursor-pointer">
+                                                            <input class="peer sr-only" name="payment_method"
+                                                                value="{{ $channel['code'] }}" type="radio"
+                                                                data-fee-fixed="{{ $fee_fixed }}"
+                                                                data-fee-percent="{{ $fee_percent }}" />
+                                                            <div
+                                                                class="p-3 flex items-center justify-between rounded-lg bg-surface-container-lowest border border-surface-container-high peer-checked:border-primary peer-checked:bg-primary/5 transition-all group-hover:bg-surface-container-low">
+                                                                <div class="flex items-center space-x-3">
+                                                                    <div
+                                                                        class="w-10 h-10 flex items-center justify-center bg-white rounded-md shadow-sm overflow-hidden p-1">
+                                                                        <img src="{{ $channel['image'] }}"
+                                                                            alt="{{ $channel['name'] }}"
+                                                                            class="max-w-full max-h-full object-contain">
+                                                                    </div>
+                                                                    <div>
+                                                                        <span
+                                                                            class="block text-sm font-bold text-on-surface">{{ $channel['name'] }}</span>
+                                                                        <span
+                                                                            class="text-[9px] text-on-surface-variant opacity-70">Admin:
+                                                                            Rp
+                                                                            {{ number_format($calculated_fee, 0, ',', '.') }}</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="w-5 h-5 rounded-full border-2 border-surface-container-high peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center transition-all">
+                                                                    <div
+                                                                        class="w-2 h-2 rounded-full bg-white opacity-0 peer-checked:opacity-100">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+                                @endif
+                            </div>
+                        </section>
+                        <!-- Security Badges -->
+                        <div
+                            class="flex flex-wrap items-center gap-6 pt-6 opacity-60 grayscale hover:grayscale-0 transition-all">
+                            <div class="flex items-center space-x-2">
+                                <span class="material-symbols-outlined text-xl">verified_user</span>
+                                <span class="text-xs font-bold uppercase tracking-widest">SSL SECURE</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="material-symbols-outlined text-xl">verified</span>
+                                <span class="text-xs font-bold uppercase tracking-widest">TRUSTED SELLER</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Testimonial Mini Card -->
-                <div
-                    class="mt-8 bg-primary text-white p-6 rounded-[2rem] flex items-center space-x-4 shadow-xl shadow-primary/10">
-                    <div class="w-12 h-12 bg-white text-primary rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
-                        A
+                    <!-- Right Column: Order Summary Card -->
+                    <div class="lg:col-span-5 sticky top-24">
+                        <div
+                            class="bg-surface-container-lowest rounded-[2.5rem] p-8 shadow-[0_20px_50px_rgba(0,119,182,0.08)] border border-outline-variant/10">
+                            <h3 class="text-xl font-extrabold text-primary mb-6 tracking-tight">Ringkasan</h3>
+                            <div class="space-y-6">
+                                <!-- Product Item -->
+                                <div class="flex flex-col w-full">
+                                    <div class="flex justify-between w-full mb-1">
+                                        <span class="text-on-surface-variant text-sm">Harga Normal</span>
+                                        <span class="text-on-surface-variant text-sm line-through decoration-red-400">Rp
+                                            499.000</span>
+                                    </div>
+                                    <div class="flex justify-between w-full">
+                                        <span
+                                            class="text-on-surface hover:text-primary transition-colors font-semibold">Harga
+                                            Promo</span>
+                                        <span class="font-bold text-green-600">Rp 149.000</span>
+                                    </div>
+                                    <div class="mt-1">
+                                        <span
+                                            class="inline-block px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider rounded">Sekali
+                                            Bayar</span>
+                                            <span
+                                            class="inline-block px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider rounded">Lifetime</span>
+                                    </div>
+                                </div>
+                                <!-- Calculations -->
+                                <div class="space-y-3">
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-on-surface-variant">Subtotal</span>
+                                        <span class="text-on-surface font-medium">Rp 149.000</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-on-surface-variant">Biaya Admin</span>
+                                        <span class="text-primary font-medium" id="admin_fee">Rp 0</span>
+                                    </div>
+                                    <div class="flex justify-between pt-4 border-t border-surface-container">
+                                        <span class="text-lg font-bold text-on-surface">Total</span>
+                                        <div class="text-right">
+                                            <span class="block text-2xl font-extrabold text-primary" id="total_price">Rp
+                                                149.000</span>
+                                            <span class="text-[11px] text-green-600 font-bold">Hemat 70% hari ini</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- CTA -->
+                                <button type="submit" id="submit-btn" onclick="console.log('Form Submit Triggered')"
+                                    class="w-full py-5 bg-primary text-white font-black rounded-2xl text-xl hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center space-x-3 shadow-xl shadow-primary/25 relative z-30">
+                                    <span>🚀 Bayar & Aktifkan Sekarang</span>
+                                </button>
+                                <div class="text-center mt-3">
+                                    <p
+                                        class="text-[12px] font-medium text-on-surface-variant flex items-center justify-center gap-1.5">
+                                        <span
+                                            class="material-symbols-outlined text-sm text-green-600">verified_user</span>
+                                        🔒 Pembayaran aman • Garansi 7 hari
+                                    </p>
+                                </div>
+                                <p class="text-center text-[10px] text-on-surface-variant/60 px-4 mt-4 leading-relaxed">
+                                    Dengan menekan tombol di atas, Anda menyetujui <a
+                                        class="underline text-primary hover:text-primary/80"
+                                        href="{{ route('terms') }}">Syarat &amp; Ketentuan</a>
+                                    serta Kebijakan Privasi Wamaps.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Testimonial Mini Card -->
+                        <div
+                            class="mt-8 bg-surface-container-low p-6 rounded-[2rem] border border-surface-container-high shadow-sm">
+                            <div class="flex items-center space-x-3 mb-3">
+                                <div class="flex text-yellow-500">
+                                    <span class="material-symbols-outlined text-sm">star</span>
+                                    <span class="material-symbols-outlined text-sm">star</span>
+                                    <span class="material-symbols-outlined text-sm">star</span>
+                                    <span class="material-symbols-outlined text-sm">star</span>
+                                    <span class="material-symbols-outlined text-sm">star</span>
+                                </div>
+                            </div>
+                            <p class="text-sm italic font-semibold text-on-surface leading-relaxed">"Gak perlu lagi
+                                bayar jasa cari database
+                                jutaan rupiah. Pakai Wamaps, tim saya bisa dapet 500 leads tertarget setiap pagi cuma
+                                modal
+                                1 klik. ROI gila-gilaan!"
+                            </p>
+                            <p class="text-xs font-bold mt-2 text-primary">— Andi Pratama, Owner Digital Agency</p>
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-xs italic font-medium leading-relaxed opacity-90">"Gak perlu lagi bayar jasa cari database jutaan rupiah. Pakai Wamaps, tim saya bisa dapet 500 leads tertarget setiap pagi cuma modal 1 klik. ROI gila-gilaan!"</p>
-                        <p class="text-[10px] font-bold mt-1 text-primary-fixed">— Andi Pratama, Owner Digital Agency</p>
-                    </div>
-                </div>
-            </div>
         </form>
     </main>
     <!-- Footer -->
@@ -337,9 +464,9 @@
             if (selected) {
                 const feeFixed = parseFloat(selected.dataset.feeFixed);
                 const feePercent = parseFloat(selected.dataset.feePercent);
-                
+
                 let fee = Math.round(feeFixed + (subtotal * (feePercent / 100)));
-                
+
                 // Tambahan biaya sesuai request user
                 if (selected.value === 'QRIS') {
                     fee += 200;
@@ -348,7 +475,7 @@
                 }
 
                 const total = subtotal + fee;
-                
+
                 adminFeeEl.textContent = 'Rp ' + fee.toLocaleString('id-ID');
                 totalPriceEl.textContent = 'Rp ' + total.toLocaleString('id-ID');
             }
@@ -362,7 +489,7 @@
         window.addEventListener('DOMContentLoaded', updatePrice);
 
         // Force Submit for Debugging
-        document.getElementById('submit-btn').addEventListener('click', function(e) {
+        document.getElementById('submit-btn').addEventListener('click', function (e) {
             console.log('Button clicked via JS listener');
             const form = document.querySelector('form[action="{{ route('checkout.store') }}"]');
             if (form) {
