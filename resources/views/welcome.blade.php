@@ -4489,8 +4489,7 @@
     <header>
         <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
             <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
-                <a href="/"
-                    class="flex items-center text-xl font-bold tracking-tight text-primary dark:text-white">
+                <a href="/" class="flex items-center text-xl font-bold tracking-tight text-primary dark:text-white">
                     <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true">
                         <rect width="32" height="32" rx="8" fill="#145efc" />
@@ -4523,10 +4522,10 @@
                         class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase">Ambil
                         Leads Otomatis</span>
                     <h1 class="text-5xl lg:text-6xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
-                        Dapatkan 100-1000 Leads <span class="text-secondary">WhatsApp Bisnis Aktif Perhari</span> &amp;
-                        Hanya Dalam
-                        <span class="text-primary">1
-                            Klik!</span>
+                        Ubah Data Google Maps Jadi <span class="text-secondary">Ratusan Chat WhatsApp Masuk Setiap
+                            Hari</span> &amp;
+                        Tingkatkan Closing Hanya dengan
+                        <span class="text-primary">1 Tools</span>
                     </h1>
                     <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
                         Ambil leads bisnis sesuai target, simpan otomatis, dan kirim broadcast WhatsApp tanpa ribet,
@@ -4843,8 +4842,8 @@
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                         <div
                             class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden flex items-center justify-center border border-slate-100 dark:border-slate-700">
-                            <img src="{{ asset('bonus.png') }}" alt="Auto Post ke Banyak Grup Facebook"
-                                loading="lazy" decoding="async"
+                            <img src="{{ asset('bonus.png') }}" alt="Auto Post ke Banyak Grup Facebook" loading="lazy"
+                                decoding="async"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -5065,8 +5064,7 @@
                                 <div class="text-[11px] font-bold text-white/80">
                                     0 dari 100 slot Level 1 terpakai
                                 </div>
-                                <div
-                                    class="h-2.5 bg-white/10 rounded-full overflow-hidden p-0.5 border border-white/5">
+                                <div class="h-2.5 bg-white/10 rounded-full overflow-hidden p-0.5 border border-white/5">
                                     <div
                                         class="h-full w-2 bg-secondary rounded-full shadow-[0_0_10px_rgba(var(--secondary),0.5)]">
                                     </div>
@@ -5303,8 +5301,8 @@
                 <!-- Brand Info -->
                 <div class="space-y-6">
                     <div class="flex items-center text-2xl font-black text-primary">
-                        <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
                             <rect width="32" height="32" rx="8" fill="#145efc" />
                             <circle cx="16" cy="16" r="9" stroke="white" stroke-width="2.5" />
                             <circle cx="16" cy="16" r="4.5" stroke="white" stroke-width="2.5" />
@@ -5378,8 +5376,7 @@
             </div>
 
             <!-- Bottom Footer -->
-            <div
-                class="border-t border-slate-200/60 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
+            <div class="border-t border-slate-200/60 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
                 <div class="text-on-surface-variant text-sm text-center lg:text-left">
                     © 2026 Wamaps. All rights reserved.
                 </div>
@@ -5413,19 +5410,18 @@
                 class="bg-green-600 hover:bg-green-500 text-white px-5 py-3 rounded-xl font-black text-xs flex items-center gap-2 shadow-xl shadow-green-900/10 active:scale-95 transition-all">
                 Beli Sekarang
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3">
                     </path>
                 </svg>
             </a>
         </div>
     </div>
     <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                ! function(f, b, e, v, n, t, s) {
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                ! function (f, b, e, v, n, t, s) {
                     if (f.fbq) return;
-                    n = f.fbq = function() {
+                    n = f.fbq = function () {
                         n.callMethod ?
                             n.callMethod.apply(n, arguments) : n.queue.push(arguments)
                     };
