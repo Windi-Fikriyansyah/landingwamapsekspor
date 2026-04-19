@@ -4829,29 +4829,21 @@
                     <!-- Auto Scraping Google Maps -->
                     <div
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300 cursor-pointer"
-                            onclick="const v = this.querySelector('video'); const o = this.querySelector('.play-overlay'); if(v.paused){v.play(); v.controls=true; o.classList.add('hidden')} else {v.pause(); v.controls=false; o.classList.remove('hidden')}">
-                            <!-- Browser Frame Placeholder -->
+                        <div
+                            class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300">
+                            <!-- Native YouTube Embed -->
+                            <iframe class="w-full h-full pt-6"
+                                src="https://www.youtube.com/embed/7VrqMjEp2ME?rel=0&modestbranding=1" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy">
+                            </iframe>
+
+                            <!-- Browser Frame Placeholder Over Embed -->
                             <div
                                 class="absolute top-0 left-0 w-full h-6 bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex items-center px-3 gap-1 z-10">
                                 <div class="w-1.5 h-1.5 rounded-full bg-red-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-amber-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-green-400/50"></div>
-                            </div>
-                            <video playsinline preload="metadata" poster="{{asset('autoscraping.webp')}}"
-                                class="w-full h-full object-cover pt-6 group-hover:scale-105 transition-transform duration-500"
-                                onended="this.controls=false; this.parentElement.querySelector('.play-overlay').classList.remove('hidden'); this.load();">
-                                <source src="https://ik.imagekit.io/bzq0b2kjq/fitur%20scrape.mp4" type="video/mp4">
-                            </video>
-                            <!-- Play Button Overlay -->
-                            <div
-                                class="play-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all duration-300 pt-6">
-                                <div
-                                    class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl scale-90 group-hover:scale-100 transition-transform duration-300 border-2 border-white/20">
-                                    <svg class="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
                             </div>
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -4862,29 +4854,21 @@
 
                     <div
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300 cursor-pointer"
-                            onclick="const v = this.querySelector('video'); const o = this.querySelector('.play-overlay'); if(v.paused){v.play(); v.controls=true; o.classList.add('hidden')} else {v.pause(); v.controls=false; o.classList.remove('hidden')}">
-                            <!-- Browser Frame Placeholder -->
+                        <div
+                            class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300">
+                            <!-- Native YouTube Embed -->
+                            <iframe class="w-full h-full pt-6"
+                                src="https://www.youtube.com/embed/deulSv3jyO8?rel=0&modestbranding=1" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy">
+                            </iframe>
+
+                            <!-- Browser Frame Placeholder Over Embed -->
                             <div
                                 class="absolute top-0 left-0 w-full h-6 bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex items-center px-3 gap-1 z-10">
                                 <div class="w-1.5 h-1.5 rounded-full bg-red-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-amber-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-green-400/50"></div>
-                            </div>
-                            <video playsinline preload="metadata" poster="{{asset('linkedin.webp')}}"
-                                class="w-full h-full object-cover pt-6 group-hover:scale-105 transition-transform duration-500"
-                                onended="this.controls=false; this.parentElement.querySelector('.play-overlay').classList.remove('hidden'); this.load();">
-                                <source src="https://ik.imagekit.io/bzq0b2kjq/0419%20(4)(3).mp4" type="video/mp4">
-                            </video>
-                            <!-- Play Button Overlay -->
-                            <div
-                                class="play-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all duration-300 pt-6">
-                                <div
-                                    class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl scale-90 group-hover:scale-100 transition-transform duration-300 border-2 border-white/20">
-                                    <svg class="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
                             </div>
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -4900,29 +4884,21 @@
                     <!-- Database Leads Rapi & Valid -->
                     <div
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300 cursor-pointer"
-                            onclick="const v = this.querySelector('video'); const o = this.querySelector('.play-overlay'); if(v.paused){v.play(); v.controls=true; o.classList.add('hidden')} else {v.pause(); v.controls=false; o.classList.remove('hidden')}">
-                            <!-- Browser Frame Placeholder -->
+                        <div
+                            class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300">
+                            <!-- Native YouTube Embed -->
+                            <iframe class="w-full h-full pt-6"
+                                src="https://www.youtube.com/embed/LfAuCmWf3I0?si=K2W_MT-Cflgl-L1D" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy">
+                            </iframe>
+
+                            <!-- Browser Frame Placeholder Over Embed -->
                             <div
                                 class="absolute top-0 left-0 w-full h-6 bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex items-center px-3 gap-1 z-10">
                                 <div class="w-1.5 h-1.5 rounded-full bg-red-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-amber-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-green-400/50"></div>
-                            </div>
-                            <video playsinline preload="metadata" poster="{{asset('leadsdata.webp')}}"
-                                class="w-full h-full object-cover pt-6 group-hover:scale-105 transition-transform duration-500"
-                                onended="this.controls=false; this.parentElement.querySelector('.play-overlay').classList.remove('hidden'); this.load();">
-                                <source src="https://ik.imagekit.io/bzq0b2kjq/0419%20(2).mp4" type="video/mp4">
-                            </video>
-                            <!-- Play Button Overlay -->
-                            <div
-                                class="play-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all duration-300 pt-6">
-                                <div
-                                    class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl scale-90 group-hover:scale-100 transition-transform duration-300 border-2 border-white/20">
-                                    <svg class="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
                             </div>
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -4934,28 +4910,21 @@
                     <!-- WhatsApp Broadcast Otomatis -->
                     <div
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300 cursor-pointer"
-                            onclick="const v = this.querySelector('video'); const o = this.querySelector('.play-overlay'); if(v.paused){v.play(); v.controls=true; o.classList.add('hidden')} else {v.pause(); v.controls=false; o.classList.remove('hidden')}">
-                            <!-- Browser Frame Placeholder -->
+                        <div
+                            class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300">
+                            <!-- Native YouTube Embed -->
+                            <iframe class="w-full h-full pt-6"
+                                src="https://www.youtube.com/embed/CMzu4Stl8HA?si=poA1A3ITYic6aYSG" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy">
+                            </iframe>
+
+                            <!-- Browser Frame Placeholder Over Embed -->
                             <div
                                 class="absolute top-0 left-0 w-full h-6 bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex items-center px-3 gap-1 z-10">
                                 <div class="w-1.5 h-1.5 rounded-full bg-red-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-amber-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-green-400/50"></div>
-                            </div>
-                            <video playsinline preload="metadata" poster="{{asset('wabroad.webp')}}"
-                                class="w-full h-full object-cover pt-6 group-hover:scale-105 transition-transform duration-500"
-                                onended="this.controls=false; this.parentElement.querySelector('.play-overlay').classList.remove('hidden'); this.load();">
-                                <source src="https://ik.imagekit.io/bzq0b2kjq/0419%20(4)(1).mp4" type="video/mp4">
-                            </video>
-                            <div
-                                class="play-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all duration-300 pt-6">
-                                <div
-                                    class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl scale-90 group-hover:scale-100 transition-transform duration-300 border-2 border-white/20">
-                                    <svg class="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
                             </div>
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -4979,28 +4948,21 @@
                     <!-- Auto Post ke Banyak Grup Facebook -->
                     <div
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300 cursor-pointer"
-                            onclick="const v = this.querySelector('video'); const o = this.querySelector('.play-overlay'); if(v.paused){v.play(); v.controls=true; o.classList.add('hidden')} else {v.pause(); v.controls=false; o.classList.remove('hidden')}">
-                            <!-- Browser Frame Placeholder -->
+                        <div
+                            class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300">
+                            <!-- Native YouTube Embed -->
+                            <iframe class="w-full h-full pt-6"
+                                src="https://www.youtube.com/embed/kfXHohrX9ME?si=myHy8OKKnsh9Lvds" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy">
+                            </iframe>
+
+                            <!-- Browser Frame Placeholder Over Embed -->
                             <div
                                 class="absolute top-0 left-0 w-full h-6 bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex items-center px-3 gap-1 z-10">
                                 <div class="w-1.5 h-1.5 rounded-full bg-red-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-amber-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-green-400/50"></div>
-                            </div>
-                            <video playsinline preload="metadata" poster="{{asset('autopost.webp')}}"
-                                class="w-full h-full object-cover pt-6 group-hover:scale-105 transition-transform duration-500"
-                                onended="this.controls=false; this.parentElement.querySelector('.play-overlay').classList.remove('hidden'); this.load();">
-                                <source src="https://ik.imagekit.io/bzq0b2kjq/0419%20(4)(2).mp4" type="video/mp4">
-                            </video>
-                            <div
-                                class="play-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all duration-300 pt-6">
-                                <div
-                                    class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl scale-90 group-hover:scale-100 transition-transform duration-300 border-2 border-white/20">
-                                    <svg class="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
                             </div>
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
@@ -5012,29 +4974,21 @@
                     <!-- Multiple Message Templates -->
                     <div
                         class="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                        <div class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-800 shadow-inner group-hover:shadow-md transition-all duration-300 cursor-pointer"
-                            onclick="const v = this.querySelector('video'); const o = this.querySelector('.play-overlay'); if(v.paused){v.play(); v.controls=true; o.classList.add('hidden')} else {v.pause(); v.controls=false; o.classList.remove('hidden')}">
-                            <!-- Browser Frame Placeholder -->
+                        <div
+                            class="aspect-[4/3] bg-slate-50 dark:bg-slate-800 rounded-3xl mb-6 overflow-hidden relative border border-slate-100 dark:border-slate-700 shadow-inner group-hover:shadow-md transition-all duration-300">
+                            <!-- Native YouTube Embed -->
+                            <iframe class="w-full h-full pt-6"
+                                src="https://www.youtube.com/embed/diW5RHOULc4?si=Ie8TNADd0nJO57oT" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy">
+                            </iframe>
+
+                            <!-- Browser Frame Placeholder Over Embed -->
                             <div
                                 class="absolute top-0 left-0 w-full h-6 bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 flex items-center px-3 gap-1 z-10">
                                 <div class="w-1.5 h-1.5 rounded-full bg-red-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-amber-400/50"></div>
                                 <div class="w-1.5 h-1.5 rounded-full bg-green-400/50"></div>
-                            </div>
-                            <video playsinline preload="metadata" poster="{{asset('multiple.webp')}}"
-                                class="w-full h-full object-cover pt-6 group-hover:scale-105 transition-transform duration-500"
-                                onended="this.controls=false; this.parentElement.querySelector('.play-overlay').classList.remove('hidden'); this.load();">
-                                <source src="https://ik.imagekit.io/bzq0b2kjq/0419%20(4).mp4" type="video/mp4">
-                            </video>
-                            <!-- Play Button Overlay -->
-                            <div
-                                class="play-overlay absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/30 transition-all duration-300 pt-6">
-                                <div
-                                    class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-xl scale-90 group-hover:scale-100 transition-transform duration-300 border-2 border-white/20">
-                                    <svg class="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
                             </div>
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
