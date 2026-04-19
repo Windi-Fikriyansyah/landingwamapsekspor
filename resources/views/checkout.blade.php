@@ -350,6 +350,13 @@
                                 <span class="material-symbols-outlined text-xl">verified</span>
                                 <span class="text-xs font-bold uppercase tracking-widest">TRUSTED SELLER</span>
                             </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                                </svg>
+                                <span class="text-xs font-bold uppercase tracking-widest">GARANSI 7 HARI</span>
+                            </div>
                         </div>
                     </div>
                     <!-- Right Column: Order Summary Card -->
@@ -375,7 +382,7 @@
                                         <span
                                             class="inline-block px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider rounded">Sekali
                                             Bayar</span>
-                                            <span
+                                        <span
                                             class="inline-block px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wider rounded">Lifetime</span>
                                     </div>
                                 </div>
@@ -399,16 +406,24 @@
                                     </div>
                                 </div>
                                 <!-- CTA -->
-                                <button type="submit" id="submit-btn" onclick="console.log('Form Submit Triggered')"
-                                    class="w-full py-5 bg-primary text-white font-black rounded-2xl text-xl hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center space-x-3 shadow-xl shadow-primary/25 relative z-30">
-                                    <span>🚀 Bayar & Aktifkan Sekarang</span>
-                                </button>
+                                <div class="px-4">
+                                    <button type="submit" id="submit-btn" onclick="console.log('Form Submit Triggered')"
+                                        class="w-full py-5 bg-primary text-white font-black rounded-2xl text-xl hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center space-x-3 shadow-xl shadow-primary/25 relative z-30">
+                                        <span>Bayar & Aktifkan Sekarang</span>
+                                    </button>
+                                </div>
                                 <div class="text-center mt-3">
-                                    <p
-                                        class="text-[12px] font-medium text-on-surface-variant flex items-center justify-center gap-1.5">
-                                        <span
-                                            class="material-symbols-outlined text-sm text-green-600">verified_user</span>
-                                        🔒 Pembayaran aman • Garansi 7 hari
+                                    <div
+                                        class="inline-flex items-center gap-2 px-4 py-2 bg-green-50 border border-green-200 rounded-full">
+                                        <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                                        </svg>
+                                        <span class="text-green-700 font-bold text-sm">Garansi 7 Hari Uang
+                                            Kembali</span>
+                                    </div>
+                                    <p class="text-[11px] text-on-surface-variant mt-2">🔒 Pembayaran aman & terenkripsi
                                     </p>
                                 </div>
                                 <p class="text-center text-[10px] text-on-surface-variant/60 px-4 mt-4 leading-relaxed">
@@ -420,25 +435,7 @@
                             </div>
                         </div>
                         <!-- Testimonial Mini Card -->
-                        <div
-                            class="mt-8 bg-surface-container-low p-6 rounded-[2rem] border border-surface-container-high shadow-sm">
-                            <div class="flex items-center space-x-3 mb-3">
-                                <div class="flex text-yellow-500">
-                                    <span class="material-symbols-outlined text-sm">star</span>
-                                    <span class="material-symbols-outlined text-sm">star</span>
-                                    <span class="material-symbols-outlined text-sm">star</span>
-                                    <span class="material-symbols-outlined text-sm">star</span>
-                                    <span class="material-symbols-outlined text-sm">star</span>
-                                </div>
-                            </div>
-                            <p class="text-sm italic font-semibold text-on-surface leading-relaxed">"Gak perlu lagi
-                                bayar jasa cari database
-                                jutaan rupiah. Pakai Wamaps, tim saya bisa dapet 500 leads tertarget setiap pagi cuma
-                                modal
-                                1 klik. ROI gila-gilaan!"
-                            </p>
-                            <p class="text-xs font-bold mt-2 text-primary">— Andi Pratama, Owner Digital Agency</p>
-                        </div>
+
                     </div>
         </form>
     </main>

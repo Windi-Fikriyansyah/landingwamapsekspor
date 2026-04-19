@@ -4508,8 +4508,8 @@
                         href="#pricing">Pricing</a>
                 </div>
                 <a href="{{ route('checkout') }}"
-                    class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold scale-95 active:duration-150 transition-all hover:bg-primary-container">Beli
-                    Sekarang</a>
+                    class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold scale-95 active:duration-150 transition-all hover:bg-primary-container">Klaim
+                    Akses</a>
             </div>
     </header>
 
@@ -4535,7 +4535,7 @@
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="{{ route('checkout') }}"
                             class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-all">
-                            Beli Sekarang
+                            Klaim Akses Lifetime Sekarang
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                             </svg>
@@ -4545,6 +4545,7 @@
                             Lihat Fitur
                         </a>
                     </div>
+
                     <div class="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 text-[10px] sm:text-sm font-bold">
                         <div
                             class="flex items-center gap-1.5 px-3 py-1.5 bg-secondary/[0.08] text-secondary rounded-full border border-secondary/10">
@@ -4615,26 +4616,90 @@
                     </h2>
                 </div>
 
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                    <!-- Agency -->
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                    <!-- Sales & Marketing -->
+                    <div
+                        class="p-6 md:p-8 bg-surface-container-lowest rounded-3xl border border-outline-variant/10 text-center space-y-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-on-surface">Sales & Marketing</h3>
+                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Tim sales
+                                yang butuh data prospek baru setiap hari untuk cold calling atau email outreach.</p>
+                        </div>
+                    </div>
+
+                    <!-- Agen Properti -->
+                    <div
+                        class="p-6 md:p-8 bg-surface-container-lowest rounded-3xl border border-outline-variant/10 text-center space-y-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center mx-auto group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-on-surface">Agen Properti</h3>
+                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Mencari
+                                developer, kontraktor, atau bisnis terkait di area tertentu.</p>
+                        </div>
+                    </div>
+
+                    <!-- Digital Agency -->
+                    <div
+                        class="p-6 md:p-8 bg-surface-container-lowest rounded-3xl border border-outline-variant/10 text-center space-y-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 bg-tertiary/10 text-tertiary rounded-2xl flex items-center justify-center mx-auto group-hover:bg-tertiary group-hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-on-surface">Digital Agency</h3>
+                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Mencari klien
+                                potensial (UMKM, restoran, klinik) yang belum punya website atau digital presence.</p>
+                        </div>
+                    </div>
+
+                    <!-- Franchise & Distributor -->
+                    <div
+                        class="p-6 md:p-8 bg-surface-container-lowest rounded-3xl border border-outline-variant/10 text-center space-y-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                        <div
+                            class="w-12 h-12 bg-error/10 text-error rounded-2xl flex items-center justify-center mx-auto group-hover:bg-error group-hover:text-white transition-colors duration-300">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                                <path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-on-surface">Franchise & Distributor</h3>
+                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Memetakan
+                                bisnis sejenis di suatu wilayah untuk ekspansi atau distribusi.</p>
+                        </div>
+                    </div>
+
+                    <!-- Researcher & Surveyor -->
                     <div
                         class="p-6 md:p-8 bg-surface-container-lowest rounded-3xl border border-outline-variant/10 text-center space-y-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
                         <div
                             class="w-12 h-12 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                                 <path
-                                    d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm10 12h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm4 12h-2v-2h2v2zm0-4h-2v-2h2v2z" />
+                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-lg text-on-surface">Agency</h3>
-                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Dapatkan
-                                supply leads klien baru setiap hari secara otomatis dari Google Maps untuk tawarkan jasa
-                                marketing agensi kamu.</p>
+                            <h3 class="font-bold text-lg text-on-surface">Researcher & Surveyor</h3>
+                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Mengumpulkan
+                                data bisnis di lokasi tertentu untuk riset pasar atau survei lapangan.</p>
                         </div>
                     </div>
 
-                    <!-- Freelancer -->
+                    <!-- Freelancer & Konsultan -->
                     <div
                         class="p-6 md:p-8 bg-surface-container-lowest rounded-3xl border border-outline-variant/10 text-center space-y-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
                         <div
@@ -4645,45 +4710,26 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-lg text-on-surface">Freelancer</h3>
-                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Cari ribuan
-                                bisnis lokal yang butuh jasa kamu dan kirim pesan penawaran profesional langsung ke
-                                WhatsApp owner-nya.</p>
+                            <h3 class="font-bold text-lg text-on-surface">Freelancer & Konsultan</h3>
+                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Mencari
+                                prospek klien baru berdasarkan jenis industri dan lokasi.</p>
                         </div>
                     </div>
 
-                    <!-- Sales B2B -->
+                    <!-- Eksportir -->
                     <div
                         class="p-6 md:p-8 bg-surface-container-lowest rounded-3xl border border-outline-variant/10 text-center space-y-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
                         <div
                             class="w-12 h-12 bg-tertiary/10 text-tertiary rounded-2xl flex items-center justify-center mx-auto group-hover:bg-tertiary group-hover:text-white transition-colors duration-300">
                             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                                 <path
-                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-lg text-on-surface">Sales B2B</h3>
-                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Hubungi
-                                decision maker bisnis di seluruh Indonesia tanpa door-to-door. Dapatkan data alamat dan
-                                nomor WA valid dengan cepat.</p>
-                        </div>
-                    </div>
-
-                    <!-- Owner Bisnis -->
-                    <div
-                        class="p-6 md:p-8 bg-surface-container-lowest rounded-3xl border border-outline-variant/10 text-center space-y-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-                        <div
-                            class="w-12 h-12 bg-error/10 text-error rounded-2xl flex items-center justify-center mx-auto group-hover:bg-error group-hover:text-white transition-colors duration-300">
-                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                                <path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg text-on-surface">Owner Bisnis</h3>
-                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Bangun
-                                database pelanggan sendiri tanpa ketergantungan iklan, dan kirim pesan promosi massal
-                                untuk tingkatkan omset.</p>
+                            <h3 class="font-bold text-lg text-on-surface">Eksportir</h3>
+                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Mencari data
+                                supplier, buyer, atau mitra bisnis dari Google Maps untuk ekspansi pasar ekspor.</p>
                         </div>
                     </div>
                 </div>
@@ -4942,68 +4988,46 @@
                 <div class="grid lg:grid-cols-3 gap-8">
                     <div class="lg:col-span-1 space-y-6">
                         <h2 class="text-4xl font-bold">Apa Kata Mereka Yang Sudah Pakai Wamaps?</h2>
-                        <p class="text-on-surface-variant">Lebih dari 100+ pebisnis dan agensi telah melipatgandakan
+                        <p class="text-on-surface-variant">Lebih dari 500+ pebisnis telah melipatgandakan
                             profit
                             mereka dengan mengotomatisasi pencarian leads tertarget.</p>
 
                     </div>
-                    <div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
-                        <!-- Testi 1 -->
-                        <div
-                            class="bg-surface-container-low p-8 rounded-3xl group hover:bg-white transition-colors duration-300">
-                            <p class="italic text-on-surface mb-6 leading-relaxed">"Gak perlu lagi bayar jasa cari
-                                database
-                                jutaan rupiah. Pakai Wamaps, tim saya bisa dapet 500 leads tertarget setiap pagi cuma
-                                modal
-                                1 klik. ROI gila-gilaan!"</p>
-                            <div class="flex items-center gap-4 border-t border-outline-variant/10 pt-6">
-                                <div
-                                    class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl">
-                                    A</div>
-                                <div>
-                                    <p class="font-bold">Andi Pratama</p>
-                                    <p class="text-sm text-on-surface-variant">Owner Digital Agency</p>
-                                </div>
-                            </div>
+                    <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                        <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                            onclick="document.getElementById('lightbox-modal').classList.remove('hidden'); document.getElementById('lightbox-img').src=this.querySelector('img').src;">
+                            <img src="https://ik.imagekit.io/bzq0b2kjq/WhatsApp%20Image%202026-04-05%20at%2010.39.32%20(1).jpeg?updatedAt=1775360730815"
+                                alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy" decoding="async"
+                                class="w-full h-full object-cover">
                         </div>
-                        <!-- Testi 2 -->
-                        <div
-                            class="bg-surface-container-low p-8 rounded-3xl group hover:bg-white transition-colors duration-300">
-                            <p class="italic text-on-surface mb-6 leading-relaxed">"Dulu pusing cari klien lokal.
-                                Sekarang
-                                tinggal ketik 'Restoran di Bali', dapet ratusan nomor WA owner-nya. Closing rate saya
-                                naik
-                                3x
-                                lipat sejak pakai Wamaps!"</p>
-                            <div class="flex items-center gap-4 border-t border-outline-variant/10 pt-6">
-                                <div
-                                    class="w-12 h-12 bg-secondary text-on-secondary rounded-full flex items-center justify-center font-bold text-xl">
-                                    M</div>
-                                <div>
-                                    <p class="font-bold">Maya Sari</p>
-                                    <p class="text-sm text-on-surface-variant">Freelance Web Architect</p>
-                                </div>
-                            </div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                            onclick="document.getElementById('lightbox-modal').classList.remove('hidden'); document.getElementById('lightbox-img').src=this.querySelector('img').src;">
+                            <img src="https://ik.imagekit.io/bzq0b2kjq/WhatsApp%20Image%202026-04-05%20at%2010.39.32%20(2).jpeg?updatedAt=1775360730715"
+                                alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy" decoding="async"
+                                class="w-full h-full object-cover">
                         </div>
-                        <!-- Testi 3 -->
-                        <div
-                            class="bg-surface-container-low p-8 rounded-3xl group hover:bg-white transition-colors duration-300">
-                            <p class="italic text-on-surface mb-6 leading-relaxed">"Fitur Multiple Message
-                                Templates-nya
-                                penyelamat banget. Saya bisa tes berbagai pesan promosi tanpa perlu save nomor
-                                satu-satu.
-                                Hemat waktu luar biasa!"</p>
-                            <div class="flex items-center gap-4 border-t border-outline-variant/10 pt-6">
-                                <div
-                                    class="w-12 h-12 bg-tertiary text-on-tertiary rounded-full flex items-center justify-center font-bold text-xl">
-                                    R</div>
-                                <div>
-                                    <p class="font-bold">Rully Sales</p>
-                                    <p class="text-sm text-on-surface-variant">Sales Manager B2B</p>
-                                </div>
-                            </div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                            onclick="document.getElementById('lightbox-modal').classList.remove('hidden'); document.getElementById('lightbox-img').src=this.querySelector('img').src;">
+                            <img src="https://ik.imagekit.io/bzq0b2kjq/WhatsApp%20Image%202026-04-05%20at%2010.39.32.jpeg?updatedAt=1775360730580"
+                                alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy" decoding="async"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Lightbox Modal -->
+            <div id="lightbox-modal"
+                class="hidden fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4 cursor-pointer backdrop-blur-sm"
+                onclick="this.classList.add('hidden');">
+                <div class="relative max-w-lg w-full max-h-[90vh]">
+                    <img id="lightbox-img" src="" alt="Testimoni WhatsApp"
+                        class="w-full h-auto max-h-[85vh] object-contain rounded-2xl shadow-2xl">
+                    <button
+                        onclick="event.stopPropagation(); document.getElementById('lightbox-modal').classList.add('hidden');"
+                        class="absolute -top-3 -right-3 w-10 h-10 bg-white text-slate-800 rounded-full flex items-center justify-center font-bold text-xl shadow-lg hover:bg-slate-100 transition-colors">
+                        &times;
+                    </button>
                 </div>
             </div>
         </section>
@@ -5049,7 +5073,7 @@
                                 class="grid grid-cols-2 gap-4 mb-8 py-6 border-y border-white/10 uppercase tracking-tight text-[10px] font-bold">
                                 <div class="space-y-1">
                                     <div class="text-amber-400 flex items-center gap-1 text-[11px]">
-                                        <span class="animate-pulse">🔥</span> 100 slot lagi
+                                        <span class="animate-pulse">🔥</span> 27 slot lagi
                                     </div>
                                     <div class="text-white/80">di harga ini</div>
                                 </div>
@@ -5060,16 +5084,7 @@
                             </div>
 
                             <!-- Progress Bar -->
-                            <div class="space-y-3 mb-12">
-                                <div class="text-[11px] font-bold text-white/80">
-                                    0 dari 100 slot Level 1 terpakai
-                                </div>
-                                <div class="h-2.5 bg-white/10 rounded-full overflow-hidden p-0.5 border border-white/5">
-                                    <div
-                                        class="h-full w-2 bg-secondary rounded-full shadow-[0_0_10px_rgba(var(--secondary),0.5)]">
-                                    </div>
-                                </div>
-                            </div>
+
 
                             <!-- Features -->
                             <ul class="space-y-5 mb-12">
@@ -5081,6 +5096,15 @@
                                         </svg>
                                     </div>
                                     <span>Auto Scraping Google Maps</span>
+                                </li>
+                                <li class="flex items-center gap-4 text-base font-medium group/item">
+                                    <div
+                                        class="w-6 h-6 bg-white/20 text-white rounded-full flex items-center justify-center border border-white/20 group-hover/item:scale-110 transition-transform">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                        </svg>
+                                    </div>
+                                    <span>Auto Scraping Linkedln</span>
                                 </li>
                                 <li class="flex items-center gap-4 text-base font-medium group/item">
                                     <div
@@ -5131,9 +5155,17 @@
                             </ul>
                             <div class="mt-6">
                                 <a href="{{ route('checkout') }}"
-                                    class="w-full py-6 bg-white hover:bg-slate-100 text-primary rounded-2xl text-xl font-black shadow-2xl shadow-black/20 transition-all hover:-translate-y-1 active:scale-[0.98] flex items-center justify-center">
-                                    Beli Sekarang
+                                    class="w-full py-6 bg-white hover:bg-slate-100 text-primary rounded-2xl text-xl font-black shadow-2xl shadow-black/20 transition-all hover:-translate-y-1 active:scale-[0.98] flex items-center justify-center text-center">
+                                    Amankan Slot Promo Sekarang
                                 </a>
+                            </div>
+                            <div class="flex items-center justify-center gap-2 mt-4">
+                                <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                                </svg>
+                                <span class="text-white/90 font-bold text-sm">Garansi 7 Hari Uang Kembali</span>
                             </div>
                         </div>
                     </div>
@@ -5255,9 +5287,9 @@
                         </p>
                         <div class="pt-6">
                             <a href="{{ route('checkout') }}"
-                                class="inline-flex items-center gap-4 bg-white hover:bg-slate-100 text-primary px-10 py-6 rounded-2xl text-xl md:text-2xl font-black shadow-2xl shadow-black/20 transition-all hover:-translate-y-1 active:scale-[0.98] group">
-                                YA, SAYA MAU WAMAPS SEKARANG!
-                                <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none"
+                                class="flex items-center justify-center text-center gap-4 bg-white hover:bg-slate-100 text-primary px-10 py-6 rounded-2xl text-xl md:text-2xl font-black shadow-2xl shadow-black/20 transition-all hover:-translate-y-1 active:scale-[0.98] group">
+                                Klaim Akses Lifetime Saya Sekarang
+                                <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform h-shrink-0" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                         d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -5286,6 +5318,13 @@
                                         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                                 </svg>
                                 Akses dikirim otomatis setelah pembelian
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                                </svg>
+                                Garansi 7 Hari Uang Kembali
                             </div>
                         </div>
                     </div>
@@ -5403,12 +5442,13 @@
                     <span class="text-xl font-black text-white leading-none">Rp 149.000</span>
                     <span class="text-[10px] text-white/60 line-through leading-none">Rp 499.000</span>
                 </div>
+
             </div>
 
             <!-- Action Button -->
             <a href="{{ route('checkout') }}"
                 class="bg-green-600 hover:bg-green-500 text-white px-5 py-3 rounded-xl font-black text-xs flex items-center gap-2 shadow-xl shadow-green-900/10 active:scale-95 transition-all">
-                Beli Sekarang
+                Klaim Sekarang
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3">
                     </path>

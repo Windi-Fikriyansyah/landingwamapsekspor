@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0D1117;
+  --ink2: #1E2A38;
+  --paper: #F5F2EC;
+  --accent: #1A6B3C;
+  --accent2: #2EA05A;
+  --gold: #C8960C;
+  --muted: #6B7280;
+  --border: rgba(13,17,23,0.10);
+  --radius: 12px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.6; }
+
+/* NAV */
+nav { position: sticky; top: 0; z-index: 100; background: rgba(245,242,236,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 14px 5%; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; color: var(--ink); letter-spacing: -0.5px; }
+.nav-logo span { color: var(--accent2); }
+.nav-cta { background: var(--accent); color: #fff; padding: 9px 22px; border-radius: 40px; font-size: 13px; font-weight: 500; text-decoration: none; transition: background 0.2s; border: none; cursor: pointer; }
+.nav-cta:hover { background: var(--accent2); }
+
+/* HERO */
+.hero { padding: 90px 5% 80px; max-width: 860px; margin: 0 auto; text-align: center; }
+.hero-badge { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 40px; padding: 6px 14px; font-size: 12px; color: var(--muted); margin-bottom: 28px; }
+.hero-badge b { color: var(--accent); font-weight: 500; }
+.hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(36px, 6vw, 60px); font-weight: 800; line-height: 1.08; letter-spacing: -2px; color: var(--ink); margin-bottom: 22px; }
+.hero h1 em { color: var(--accent2); font-style: normal; }
+.hero p { font-size: 17px; color: var(--muted); max-width: 560px; margin: 0 auto 36px; font-weight: 300; line-height: 1.7; }
+.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px; }
+.btn-primary { background: var(--accent); color: #fff; padding: 14px 32px; border-radius: 40px; font-size: 15px; font-weight: 500; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-flex; align-items: center; gap: 8px; }
+.btn-primary:hover { background: var(--accent2); transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: var(--ink); padding: 14px 28px; border-radius: 40px; font-size: 15px; font-weight: 400; text-decoration: none; border: 1px solid var(--border); transition: background 0.2s; }
+.btn-ghost:hover { background: #fff; }
+.hero-trust { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+.trust-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+.trust-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent2); }
+
+/* STATS */
+.stats { background: var(--ink2); color: #fff; padding: 50px 5%; }
+.stats-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0; }
+.stat-item { padding: 20px 28px; border-right: 1px solid rgba(255,255,255,0.08); text-align: center; }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: 'Syne', sans-serif; font-size: 38px; font-weight: 800; letter-spacing: -1.5px; color: #fff; }
+.stat-num span { color: var(--accent2); }
+.stat-label { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+/* PROBLEM */
+.section { padding: 80px 5%; max-width: 1000px; margin: 0 auto; }
+.section-tag { display: inline-block; background: rgba(26,107,60,0.08); color: var(--accent); font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 0.04em; text-transform: uppercase; }
+.section h2 { font-family: 'Syne', sans-serif; font-size: clamp(26px, 4vw, 40px); font-weight: 700; letter-spacing: -1px; line-height: 1.15; margin-bottom: 16px; }
+.section h2 em { color: var(--accent2); font-style: normal; }
+.section .lead { font-size: 16px; color: var(--muted); max-width: 580px; line-height: 1.75; margin-bottom: 40px; font-weight: 300; }
+
+.pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.pain-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; position: relative; overflow: hidden; }
+.pain-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: #E24B4A; }
+.pain-icon { font-size: 22px; margin-bottom: 12px; }
+.pain-card h4 { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+.pain-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* HOW IT WORKS */
+.how-section { background: var(--ink); color: #fff; padding: 80px 5%; }
+.how-inner { max-width: 1000px; margin: 0 auto; }
+.how-inner .section-tag { background: rgba(46,160,90,0.15); color: var(--accent2); }
+.how-inner h2 { color: #fff; }
+.how-inner .lead { color: rgba(255,255,255,0.55); }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; margin-top: 8px; }
+.step { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius); padding: 28px; position: relative; }
+.step-num { font-family: 'Syne', sans-serif; font-size: 48px; font-weight: 800; color: rgba(255,255,255,0.06); line-height: 1; margin-bottom: 16px; }
+.step h4 { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.step p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+.step-tag { display: inline-block; background: rgba(46,160,90,0.18); color: var(--accent2); font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-top: 12px; }
+
+/* FEATURES */
+.feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.feat-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; }
+.feat-icon-wrap { width: 42px; height: 42px; border-radius: 10px; background: rgba(26,107,60,0.08); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px; }
+.feat-card h4 { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+.feat-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+/* TESTIMONIALS */
+.testi-section { background: #fff; padding: 80px 5%; }
+.testi-inner { max-width: 1000px; margin: 0 auto; }
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 8px; }
+.testi-card { background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.testi-stars { color: var(--gold); font-size: 14px; margin-bottom: 12px; letter-spacing: 2px; }
+.testi-text { font-size: 14px; color: var(--ink); line-height: 1.75; margin-bottom: 18px; font-style: italic; font-weight: 300; }
+.testi-author { display: flex; align-items: center; gap: 10px; }
+.testi-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: #fff; }
+.testi-name { font-size: 13px; font-weight: 500; color: var(--ink); }
+.testi-role { font-size: 12px; color: var(--muted); }
+
+/* PRICING */
+.price-section { padding: 80px 5%; max-width: 900px; margin: 0 auto; text-align: center; }
+.price-toggle { display: inline-flex; background: #fff; border: 1px solid var(--border); border-radius: 40px; padding: 4px; margin-bottom: 40px; gap: 4px; }
+.ptoggle { padding: 8px 20px; border-radius: 40px; font-size: 13px; border: none; cursor: pointer; background: transparent; color: var(--muted); font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
+.ptoggle.active { background: var(--accent); color: #fff; }
+.price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; text-align: left; }
+.price-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+.price-card.featured { border: 2px solid var(--accent2); position: relative; }
+.feat-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent2); color: #fff; font-size: 11px; font-weight: 500; padding: 4px 14px; border-radius: 20px; white-space: nowrap; }
+.price-plan { font-size: 12px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+.price-amount { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -1.5px; color: var(--ink); margin-bottom: 4px; }
+.price-amount span { font-size: 14px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.price-desc { font-size: 13px; color: var(--muted); margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+.price-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.price-list li { font-size: 13px; color: var(--ink); display: flex; align-items: flex-start; gap: 8px; }
+.price-list li::before { content: '✓'; color: var(--accent2); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.price-list li.no::before { content: '×'; color: #ccc; }
+.price-list li.no { color: var(--muted); }
+.btn-plan { width: 100%; padding: 12px; border-radius: 40px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; border: 1px solid var(--border); background: transparent; color: var(--ink); font-family: 'DM Sans', sans-serif; }
+.btn-plan.green { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn-plan:hover { transform: translateY(-1px); }
+.btn-plan.green:hover { background: var(--accent2); }
+
+/* FAQ */
+.faq-section { background: #fff; padding: 80px 5%; }
+.faq-inner { max-width: 680px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q { padding: 20px 0; font-size: 15px; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--ink); user-select: none; }
+.faq-icon { width: 22px; height: 22px; border-radius: 50%; background: var(--paper); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--muted); flex-shrink: 0; transition: transform 0.2s; }
+.faq-a { font-size: 14px; color: var(--muted); line-height: 1.75; padding-bottom: 18px; display: none; }
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-icon { transform: rotate(45deg); background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* CTA FINAL */
+.cta-section { background: var(--ink2); color: #fff; padding: 90px 5%; text-align: center; }
+.cta-section h2 { font-family: 'Syne', sans-serif; font-size: clamp(28px, 5vw, 48px); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 16px; }
+.cta-section h2 em { color: var(--accent2); font-style: normal; }
+.cta-section p { font-size: 16px; color: rgba(255,255,255,0.55); margin-bottom: 36px; font-weight: 300; }
+.cta-guarantee { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 40px; padding: 8px 18px; font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 18px; }
+
+/* FOOTER */
+footer { background: var(--ink); color: rgba(255,255,255,0.4); text-align: center; padding: 28px 5%; font-size: 13px; }
+footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+@keyframes fadeUp { from { opacity:0; transform: translateY(24px); } to { opacity:1; transform: translateY(0); } }
+.hero > * { animation: fadeUp 0.5s ease both; }
+.hero > *:nth-child(1) { animation-delay: 0.05s; }
+.hero > *:nth-child(2) { animation-delay: 0.12s; }
+.hero > *:nth-child(3) { animation-delay: 0.2s; }
+.hero > *:nth-child(4) { animation-delay: 0.28s; }
+.hero > *:nth-child(5) { animation-delay: 0.35s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Export<span>Leads</span> Pro</div>
+  <a href="#pricing" class="nav-cta">Coba Gratis 7 Hari</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge"><div class="trust-dot"></div> <b>1.200+ eksportir</b> sudah pakai tools ini</div>
+  <h1>Dari Google Maps ke <em>WhatsApp Buyer</em><br>— Dalam 10 Menit.</h1>
+  <p>Ambil ratusan data buyer potensial dari Google Maps secara otomatis, lalu kirim pesan penawaran langsung ke WhatsApp mereka — tanpa satu pun ketik manual.</p>
+  <div class="hero-btns">
+    <a href="#pricing" class="btn-primary">Mulai Trial Gratis 7 Hari →</a>
+    <a href="#how" class="btn-ghost">Lihat Cara Kerjanya</a>
+  </div>
+  <div class="hero-trust">
+    <div class="trust-item"><div class="trust-dot"></div> Tanpa kartu kredit</div>
+    <div class="trust-item"><div class="trust-dot"></div> Refund 14 hari</div>
+    <div class="trust-item"><div class="trust-dot"></div> Setup 15 menit</div>
+    <div class="trust-item"><div class="trust-dot"></div> Support 7 hari/minggu</div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">1.200<span>+</span></div><div class="stat-label">Eksportir aktif</div></div>
+    <div class="stat-item"><div class="stat-num">500<span>+</span></div><div class="stat-label">Data/hari per user</div></div>
+    <div class="stat-item"><div class="stat-num">12<span>–25%</span></div><div class="stat-label">Rata-rata reply rate WA</div></div>
+    <div class="stat-item"><div class="stat-num">78<span>%</span></div><div class="stat-label">Tingkat nomor valid</div></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<div class="section" id="problem">
+  <div class="section-tag">Masalah yang dialami eksportir</div>
+  <h2>Cara lama cari buyer <em>tidak bisa di-scale.</em></h2>
+  <p class="lead">Pameran setahun sekali, referral yang lambat, cold email yang diabaikan — semua itu membatasi pertumbuhan ekspor kamu.</p>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="pain-icon">⏰</div>
+      <h4>Buang waktu 3–5 jam per hari</h4>
+      <p>Cari satu per satu di Google Maps, catat manual, copy-paste nomor ke WhatsApp. Produktivitas habis sebelum mulai kerja yang nyata.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">📉</div>
+      <h4>Pipeline buyer yang tidak menentu</h4>
+      <p>Kadang penuh order, kadang kosong. Tidak ada sistem prospek yang konsisten bikin revenue tidak bisa diprediksi.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">💸</div>
+      <h4>Pameran mahal, ROI tidak jelas</h4>
+      <p>Habiskan puluhan juta untuk pameran, tapi kontak yang didapat sering tidak relevan atau sudah dingin saat dihubungi.</p>
+    </div>
+    <div class="pain-card">
+      <div class="pain-icon">🔁</div>
+      <h4>Terlalu bergantung pada referral</h4>
+      <p>Referral bagus, tapi tidak bisa dikontrol volumenya. Satu buyer selesai, kamu harus mulai mencari dari nol lagi.</p>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="how-section" id="how">
+  <div class="how-inner">
+    <div class="section-tag">Cara kerja</div>
+    <h2 style="font-family:'Syne',sans-serif;font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-1px;margin-bottom:16px;color:#fff;">3 langkah dari <em>keyword ke buyer.</em></h2>
+    <p class="lead">Tidak perlu skill teknis. Tidak perlu tim besar. Mulai dapat leads hari ini.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>Masukkan keyword & lokasi target</h4>
+        <p>Ketik keyword buyer yang kamu cari — "importir furnitur", "wholesale tekstil", "distributor makanan" — dan pilih kota atau negara tujuan ekspor.</p>
+        <span class="step-tag">Selesai dalam 30 detik</span>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>Sistem scrape data otomatis</h4>
+        <p>ExportLeads Pro scan Google Maps dan kumpulkan nama bisnis, nomor WhatsApp, alamat, rating, dan kategori — semua tersaji di dashboard.</p>
+        <span class="step-tag">Ratusan data dalam menit</span>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>Blast pesan WA ke semua kontak</h4>
+        <p>Pilih template pesan (atau buat sendiri), atur jadwal, klik kirim. Sistem bekerja otomatis — kamu tinggal tunggu reply buyer masuk.</p>
+        <span class="step-tag">Reply rata-rata 12–25%</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="section" id="features">
+  <div class="section-tag">Fitur unggulan</div>
+  <h2>Semua yang kamu butuhkan untuk <em>pipeline buyer yang penuh.</em></h2>
+  <p class="lead">Dirancang khusus untuk eksportir Indonesia yang ingin tumbuh tanpa menambah tim.</p>
+  <div class="feat-grid">
+    <div class="feat-card">
+      <div class="feat-icon-wrap">🗺️</div>
+      <h4>Google Maps Scraper</h4>
+      <p>Ambil data bisnis dari Google Maps by keyword, kota, kategori, dan radius. Filter by rating dan ukuran bisnis untuk leads yang lebih berkualitas.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon-wrap">📲</div>
+      <h4>WA Blast Otomatis</h4>
+      <p>Kirim pesan ke ratusan kontak sekaligus. Sistem atur delay pengiriman agar tidak terdeteksi sebagai spam oleh WhatsApp.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon-wrap">✅</div>
+      <h4>Verifikasi Nomor WA</h4>
+      <p>Setiap nomor diverifikasi sebelum blast. Tingkat nomor aktif rata-rata 78% — tidak ada pesan terbuang sia-sia.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon-wrap">📝</div>
+      <h4>Template Pesan Siap Pakai</h4>
+      <p>30+ template pesan dalam Bahasa Indonesia dan Inggris untuk berbagai komoditi ekspor. Tinggal isi nama bisnis kamu dan kirim.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon-wrap">📊</div>
+      <h4>Dashboard Analytics</h4>
+      <p>Pantau jumlah pesan terkirim, jumlah reply, tingkat konversi, dan performa per kampanye — semua dalam satu tampilan.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon-wrap">🔄</div>
+      <h4>Export ke CSV / CRM</h4>
+      <p>Ekspor semua data kontak ke CSV atau integrasikan langsung ke CRM favoritmu untuk follow-up yang lebih terstruktur.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testi-section">
+  <div class="testi-inner">
+    <div class="section-tag">Hasil nyata</div>
+    <h2 style="font-family:'Syne',sans-serif;font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-1px;margin-bottom:14px;">Kata mereka yang <em>sudah pakai.</em></h2>
+    <p style="font-size:16px;color:var(--muted);margin-bottom:36px;font-weight:300;">Bukan testimoni rekayasa — ini cerita nyata dari sesama eksportir.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Dalam 3 hari pertama saya dapat 47 kontak buyer dari Malaysia dan Singapura. 6 di antaranya sudah minta sampel produk. Ini luar biasa."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RH</div>
+          <div><div class="testi-name">Rudi Hartono</div><div class="testi-role">Eksportir furnitur rotan, Cirebon</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Dulu saya habiskan 4 jam sehari untuk prospek manual. Sekarang cukup 20 menit dan jumlah kontak yang saya hubungi 10x lebih banyak."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#854F0B;">SW</div>
+          <div><div class="testi-name">Siti Wahyuni</div><div class="testi-role">Eksportir kopi specialty, Aceh</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Saya skeptis di awal. Tapi setelah trial 7 hari dapat 3 leads serius dari Jepang, langsung upgrade ke paket Pro. Worth every rupiah."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:#185FA5;">BW</div>
+          <div><div class="testi-name">Budi Wijaya</div><div class="testi-role">Eksportir batik, Solo</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="price-section" id="pricing">
+  <div class="section-tag" style="display:inline-block;margin-bottom:16px;">Harga & Paket</div>
+  <h2 style="font-family:'Syne',sans-serif;font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-1px;margin-bottom:14px;">Mulai dari <em>kurang dari secangkir kopi per hari.</em></h2>
+  <p style="font-size:16px;color:var(--muted);margin-bottom:32px;font-weight:300;">Semua paket sudah termasuk trial 7 hari gratis. Batal kapan saja.</p>
+  <div class="price-toggle">
+    <button class="ptoggle active" onclick="setPeriod('monthly',this)">Bulanan</button>
+    <button class="ptoggle" onclick="setPeriod('yearly',this)">Tahunan <span style="font-size:11px;color:var(--accent2);">hemat 30%</span></button>
+  </div>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="price-plan">Starter</div>
+      <div class="price-amount" id="p1">Rp 197rb <span>/ bulan</span></div>
+      <div class="price-desc">Untuk eksportir yang baru mulai membangun pipeline buyer.</div>
+      <ul class="price-list">
+        <li>Scrape 200 data/hari</li>
+        <li>WA Blast 200 pesan/hari</li>
+        <li>10 template pesan</li>
+        <li>Export ke CSV</li>
+        <li>Support email</li>
+        <li class="no">Dashboard analytics</li>
+        <li class="no">Verifikasi nomor WA</li>
+      </ul>
+      <button class="btn-plan" onclick="window.location='#'">Mulai Trial Gratis</button>
+    </div>
+    <div class="price-card featured">
+      <div class="feat-badge">Paling Populer</div>
+      <div class="price-plan">Pro</div>
+      <div class="price-amount" id="p2">Rp 297rb <span>/ bulan</span></div>
+      <div class="price-desc">Untuk eksportir yang serius ingin pipeline buyer yang konsisten.</div>
+      <ul class="price-list">
+        <li>Scrape 500 data/hari</li>
+        <li>WA Blast 500 pesan/hari</li>
+        <li>30+ template pesan (ID + EN)</li>
+        <li>Verifikasi nomor WA</li>
+        <li>Dashboard analytics lengkap</li>
+        <li>Export ke CSV + CRM</li>
+        <li>Support WA prioritas</li>
+      </ul>
+      <button class="btn-plan green" onclick="window.location='#'">Mulai Trial Gratis →</button>
+    </div>
+    <div class="price-card">
+      <div class="price-plan">Business</div>
+      <div class="price-amount" id="p3">Rp 597rb <span>/ bulan</span></div>
+      <div class="price-desc">Untuk tim ekspor yang butuh volume tinggi dan multi-akun.</div>
+      <ul class="price-list">
+        <li>Scrape unlimited</li>
+        <li>WA Blast unlimited</li>
+        <li>5 sub-akun tim</li>
+        <li>API access</li>
+        <li>Onboarding call 1-on-1</li>
+        <li>Dedicated account manager</li>
+        <li>SLA support 2 jam</li>
+      </ul>
+      <button class="btn-plan" onclick="window.location='#'">Hubungi Sales</button>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-tag" style="display:inline-block;margin-bottom:16px;">Pertanyaan umum</div>
+    <h2 style="font-family:'Syne',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:700;letter-spacing:-1px;margin-bottom:32px;">Masih ada pertanyaan?</h2>
+    <div id="faq-list"></div>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<div class="cta-section">
+  <h2>Mulai isi pipeline buyer kamu <em>hari ini.</em></h2>
+  <p>Tidak ada risiko. Trial 7 hari gratis, refund 14 hari tanpa pertanyaan.</p>
+  <a href="#pricing" class="btn-primary" style="font-size:16px;padding:16px 36px;">Coba Gratis Sekarang →</a>
+  <div><div class="cta-guarantee">🔒 Garansi uang kembali 14 hari · Tanpa kartu kredit · Batal kapan saja</div></div>
+</div>
+
+<footer>
+  &copy; 2025 ExportLeads Pro. Dibuat untuk eksportir Indonesia. &nbsp;|&nbsp; <a href="#">Syarat & Ketentuan</a> &nbsp;|&nbsp; <a href="#">Kebijakan Privasi</a>
+</footer>
+
+<script>
+const faqs = [
+  { q: "Apakah ini legal dan aman digunakan?", a: "Ya. Tools kami hanya mengambil data yang tersedia secara publik di Google Maps — sama seperti yang bisa kamu lihat dengan browsing manual. Tidak ada pelanggaran privasi atau TOS Google karena kami mengakses data publik." },
+  { q: "Bagaimana dengan risiko nomor WA saya kena banned?", a: "Sistem kami menggunakan delay pengiriman yang menyerupai pola manusia dan rotasi sesi agar tidak terdeteksi sebagai spam. Tingkat banned pengguna kami di bawah 2%. Kami juga menyediakan panduan best practice penggunaan WA blast." },
+  { q: "Berapa lama setup awal sampai bisa mulai blast?", a: "Rata-rata 15 menit. Kamu akan mendapat video onboarding step-by-step dan akses ke grup support WhatsApp begitu mendaftar. Pengguna baru biasanya sudah bisa blast di hari pertama." },
+  { q: "Apakah datanya akurat? Berapa persen nomor yang valid?", a: "Semua nomor diverifikasi sebelum masuk ke daftar kontak kamu. Tingkat validitas rata-rata 78%. Nomor yang tidak aktif otomatis difilter sehingga pesan tidak terbuang." },
+  { q: "Bisakah saya coba sebelum bayar?", a: "Tentu. Semua paket sudah termasuk trial 7 hari penuh tanpa kartu kredit. Kamu bisa gunakan semua fitur tanpa batasan selama masa trial." },
+  { q: "Bagaimana cara refund jika tidak puas?", a: "Kirim email ke support@exportleadspro.id dalam 14 hari sejak pembayaran, dan refund penuh akan diproses dalam 1–3 hari kerja. Tidak perlu alasan." }
+];
+
+const faqEl = document.getElementById('faq-list');
+faqs.forEach((f, i) => {
+  const item = document.createElement('div');
+  item.className = 'faq-item';
+  item.innerHTML = `<div class="faq-q" onclick="toggleFaq(${i})">${f.q}<div class="faq-icon">+</div></div><div class="faq-a">${f.a}</div>`;
+  faqEl.appendChild(item);
+});
+function toggleFaq(i) {
+  const items = document.querySelectorAll('.faq-item');
+  items[i].classList.toggle('open');
+}
+
+const prices = {
+  monthly: [['Rp 197rb','/ bulan'],['Rp 297rb','/ bulan'],['Rp 597rb','/ bulan']],
+  yearly: [['Rp 138rb','/ bulan'],['Rp 208rb','/ bulan'],['Rp 418rb','/ bulan']]
+};
+function setPeriod(p, btn) {
+  document.querySelectorAll('.ptoggle').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  ['p1','p2','p3'].forEach((id, i) => {
+    const el = document.getElementById(id);
+    el.innerHTML = prices[p][i][0] + ' <span>' + prices[p][i][1] + '</span>';
+  });
+}
+</script>
+</body>
+</html>
