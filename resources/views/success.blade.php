@@ -106,7 +106,7 @@
                 Cek email untuk detail login akun Anda.
             </p>
 
-            <a href="{{ url('/login') }}"
+            <a href="https://wamaps.myxyzz.online/login"
                 class="w-full py-4 px-8 bg-blue-600 text-white font-extrabold rounded-2xl hover:bg-blue-700 active:scale-[0.98] transition-all flex items-center justify-center gap-3 shadow-lg shadow-blue-200 group">
                 Mulai Gunakan Wamaps
                 <span
