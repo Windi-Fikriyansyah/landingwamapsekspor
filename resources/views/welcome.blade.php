@@ -4522,15 +4522,13 @@
                         class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase">Dipakai
                         500+ Pebisnis Indonesia</span>
                     <h1 class="text-5xl lg:text-6xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
-                        Temukan Ribuan <span class="text-secondary">Prospek Bisnis</span>
-                        Dalam Hitungan
-                        <span class="text-primary">Menit</span>
+                        Dapatkan 1.000+ <span class="text-secondary">Kontak Prospek Bisnis Lokal</span>
+                        Hanya Dalam Hitungan
+                        <span class="text-primary">Detik</span>
                     </h1>
                     <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
-                        Ambil prospek bisnis dari Google Maps secara otomatis, simpan otomatis, dan langsung kirim
-                        broadcast WhatsApp tanpa ribet,
-                        tanpa
-                        coding, dalam hitungan menit.
+                        Tanpa cold calling, tanpa beli database, tanpa buang waktu — langsung dari Google Maps ke
+                        WhatsApp blast otomatis
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="{{ route('checkout') }}"
