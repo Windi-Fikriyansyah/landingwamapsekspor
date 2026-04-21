@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Wamaps - Tools Scrape Google Maps &amp; WhatsApp Broadcast</title>
+    <title>Wamaps - Temukan Buyer & Supplier Internasional di Google Maps & LinkedIn</title>
     <meta name="description"
-        content="Wamaps adalah alat otomatisasi lead generation terbaik untuk mencari data di Google Maps dan mengirim pesan WhatsApp Broadcast secara massal dengan mudah.">
+        content="Wamaps adalah alat otomatisasi lead generation terbaik bagi eksportir untuk mencari data buyer internasional dan mengirim pesan penawaran otomatis ke seluruh dunia.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -4507,9 +4507,9 @@
                     <a class="text-slate-600 dark:text-slate-400 font-medium hover:text-primary transition-colors"
                         href="#pricing">Pricing</a>
                 </div>
-                <a href="{{ route('checkout') }}"
-                    class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold scale-95 active:duration-150 transition-all hover:bg-primary-container">Klaim
-                    Akses</a>
+                <a href="https://winme.id/wamaps1/lp/checkout-wamaps"
+                    class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold scale-95 active:duration-150 transition-all hover:bg-primary-container">Ambil
+                    Promo</a>
             </div>
     </header>
 
@@ -4522,18 +4522,18 @@
                         class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase">Dipakai
                         500+ Pebisnis Indonesia</span>
                     <h1 class="text-5xl lg:text-6xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
-                        Dapatkan 1.000+ <span class="text-secondary">Kontak Prospek Bisnis Lokal</span>
+                        Temukan Ribuan <span class="text-secondary">Buyer & Supplier Internasional</span>
                         Hanya Dalam Hitungan
                         <span class="text-primary">Detik</span>
                     </h1>
                     <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
-                        Tanpa cold calling, tanpa beli database, tanpa buang waktu — langsung dari Google Maps ke
-                        WhatsApp blast otomatis
+                        Cara termudah bagi Eksportir untuk ekspansi pasar global. Temukan data kontak importir,
+                        distributor, dan partner bisnis di seluruh dunia langsung dari Google Maps & LinkedIn.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="{{ route('checkout') }}"
+                        <a href="https://winme.id/wamaps1/lp/checkout-wamaps"
                             class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-all">
-                            Klaim Akses Lifetime Sekarang
+                            Ambil Promo Sekarang
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
                             </svg>
@@ -4609,8 +4609,8 @@
         <section class="py-16 bg-white border-y border-slate-50 lazy-section">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-2xl md:text-3xl font-bold text-on-surface tracking-tight">Siapa yang Cocok Pakai
-                        Wamaps?
+                    <h2 class="text-2xl md:text-3xl font-bold text-on-surface tracking-tight">Solusi Lead Generation
+                        Tepat Sasaran Untuk...
                     </h2>
                 </div>
 
@@ -4714,20 +4714,23 @@
                         </div>
                     </div>
 
-                    <!-- Eksportir -->
                     <div
-                        class="p-6 md:p-8 bg-surface-container-lowest rounded-3xl border border-outline-variant/10 text-center space-y-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                        class="p-6 md:p-8 bg-primary/5 rounded-3xl border-2 border-primary text-center space-y-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group ring-4 ring-primary/5">
                         <div
-                            class="w-12 h-12 bg-tertiary/10 text-tertiary rounded-2xl flex items-center justify-center mx-auto group-hover:bg-tertiary group-hover:text-white transition-colors duration-300">
+                            class="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center mx-auto shadow-lg">
                             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                                 <path
                                     d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-bold text-lg text-on-surface">Eksportir</h3>
-                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Mencari data
-                                supplier, buyer, atau mitra bisnis dari Google Maps untuk ekspansi pasar ekspor.</p>
+                            <span
+                                class="inline-block px-3 py-1 bg-primary text-white text-[10px] font-bold rounded-full mb-2">MOST
+                                POPULAR</span>
+                            <h3 class="font-bold text-lg text-on-surface">Eksportir & Trader</h3>
+                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Dapatkan
+                                database importir, wholesale distributor, dan retail buyer di luar negeri secara instan
+                                dan masif.</p>
                         </div>
                     </div>
                 </div>
@@ -4738,11 +4741,11 @@
         <section class="py-24 bg-surface-container-low overflow-hidden lazy-section">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16 space-y-4">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-on-surface tracking-tight">Kenapa Banyak Orang
-                        Gagal Dapat Leads?</h2>
-                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">Mungkin selama ini
-                        kamu
-                        melakukan cara yang salah, melelahkan, dan membuang banyak biaya tanpa hasil yang maksimal.</p>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-on-surface tracking-tight">Kenapa Banyak
+                        Eksportir Sulit Ekspansi Global?</h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">Mencari buyer luar
+                        negeri tidak harus mahal dan melelahkan. Berhenti membuang waktu dengan cara lama yang tidak
+                        terukur.</p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
@@ -4759,10 +4762,10 @@
                                         d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-on-surface">Data Tidak Valid (Data Sampah)</h3>
+                            <h3 class="text-xl font-bold text-on-surface">Data Buyer Tidak Valid</h3>
                             <p class="text-on-surface-variant text-sm leading-relaxed">Sering dapat data nomor telepon
-                                kantor atau nomor yang sudah tidak aktif saat mencari manual di internet. Rasio closing
-                                pun jadi nol besar.</p>
+                                yang sudah tidak aktif atau hanya nomor umum kantor. Sangat sulit untuk menembus
+                                gatekeeper tanpa kontak person yang tepat.</p>
                         </div>
                     </div>
 
@@ -4779,10 +4782,10 @@
                                         d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-on-surface">Scraping Manual Sangat Lambat</h3>
-                            <p class="text-on-surface-variant text-sm leading-relaxed">Membuang waktu berjam-jam hanya
-                                untuk buka-tutup tab Google Maps satu per satu demi mencatat 50 data leads yang belum
-                                tentu mau beli.</p>
+                            <h3 class="text-xl font-bold text-on-surface">Tergantung Trade Fair & B2B Portal Mahal</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">Biaya pameran luar negeri dan
+                                membership B2B portal bisa mencapai puluhan juta rupiah, tapi leads yang didapat
+                                seringkali tidak sesuai harapan.</p>
                         </div>
                     </div>
 
@@ -4799,10 +4802,10 @@
                                         d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm3.3 14.71L11 12.41V7h2v4.59l3.71 3.71-1.42 1.41z" />
                                 </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-on-surface">Lelah Save Nomor & Chat Satu-Satu</h3>
-                            <p class="text-on-surface-variant text-sm leading-relaxed">Energi habis hanya untuk
-                                menyimpan kontak di HP secara manual sebelum bisa chat. Belum kirim pesan, tangan sudah
-                                keriting duluan.</p>
+                            <h3 class="text-xl font-bold text-on-surface">Sulit Menjangkau Buyer Luar Negeri</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">Bingung bagaimana cara mulai
+                                menawarkan produk ke buyer internasional secara personal dan efektif tanpa dianggap
+                                spamming.</p>
                         </div>
                     </div>
                 </div>
@@ -4817,9 +4820,9 @@
                         Semua Fitur Wamaps untuk Lead Generation & WhatsApp Otomatis
                     </h2>
                     <p class="text-on-surface-variant max-w-4xl mx-auto text-lg leading-relaxed">
-                        Wamaps membantu kamu mengambil leads bisnis dari Google Maps, menyimpannya rapi, dan mengirim
-                        WhatsApp massal secara otomatis — tanpa ribet dan tanpa coding. Semua fitur dirancang agar kamu
-                        hemat waktu hingga 90% dan bisa scale bisnis lebih cepat.
+                        Wamaps mempermudah eksportir menemukan buyer internasional secepat kilat. Scrape data bisnis di
+                        negara manapun, filter leads potensial, dan kirim penawaran via WhatsApp secara massal — semua
+                        dalam satu alat yang hemat waktu hingga 90%.
                     </p>
                 </div>
 
@@ -4846,8 +4849,8 @@
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
                             Auto Scraping Google Maps</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">Ambil ribuan leads bisnis sesuai
-                            lokasi dan keyword target secara otomatis dalam hitungan detik.</p>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">Pilih target negara & kota manapun di
+                            dunia. Ambil ribuan data buyer & partner bisnis sesuai industri Anda secara otomatis.</p>
                     </div>
 
                     <div
@@ -5017,9 +5020,8 @@
                             1</div>
                         <div class="space-y-2">
                             <h3 class="text-xl font-bold text-on-surface">Masukkan Keyword & Lokasi</h3>
-                            <p class="text-on-surface-variant text-sm leading-relaxed">Tentukan target bisnis dan
-                                lokasi
-                                yang ingin kamu ambil datanya (Contoh: "Apotek di Jakarta").</p>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">Tentukan target buyer dan negara
+                                tujuan (Contoh: "Furniture Wholesale in Hamburg, Germany").</p>
                         </div>
                     </div>
 
@@ -5070,29 +5072,25 @@
                 <div class="grid lg:grid-cols-3 gap-8">
                     <div class="lg:col-span-1 space-y-6">
                         <h2 class="text-4xl font-bold">Apa Kata Mereka Yang Sudah Pakai Wamaps?</h2>
-                        <p class="text-on-surface-variant">Lebih dari 500+ pebisnis telah melipatgandakan
-                            profit
-                            mereka dengan mengotomatisasi pencarian leads tertarget.</p>
+                        <p class="text-on-surface-variant">Lebih dari 500+ eksportir dan pebisnis telah menghemat ribuan
+                            dollar biaya prospecting mereka dan menemukan partner global dengan Wamaps.</p>
 
                     </div>
                     <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                         <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                             onclick="document.getElementById('lightbox-modal').classList.remove('hidden'); document.getElementById('lightbox-img').src=this.querySelector('img').src;">
-                            <img src="https://ik.imagekit.io/bzq0b2kjq/WhatsApp%20Image%202026-04-05%20at%2010.39.32%20(1).jpeg?updatedAt=1775360730815"
-                                alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy" decoding="async"
-                                class="w-full h-full object-cover">
+                            <img src="{{asset('bukti1.jpeg')}}" alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy"
+                                decoding="async" class="w-full h-full object-cover">
                         </div>
                         <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                             onclick="document.getElementById('lightbox-modal').classList.remove('hidden'); document.getElementById('lightbox-img').src=this.querySelector('img').src;">
-                            <img src="https://ik.imagekit.io/bzq0b2kjq/WhatsApp%20Image%202026-04-05%20at%2010.39.32%20(2).jpeg?updatedAt=1775360730715"
-                                alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy" decoding="async"
-                                class="w-full h-full object-cover">
+                            <img src="{{asset('bukti2.jpeg')}}" alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy"
+                                decoding="async" class="w-full h-full object-cover">
                         </div>
                         <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                             onclick="document.getElementById('lightbox-modal').classList.remove('hidden'); document.getElementById('lightbox-img').src=this.querySelector('img').src;">
-                            <img src="https://ik.imagekit.io/bzq0b2kjq/WhatsApp%20Image%202026-04-05%20at%2010.39.32.jpeg?updatedAt=1775360730580"
-                                alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy" decoding="async"
-                                class="w-full h-full object-cover">
+                            <img src="{{asset('bukti3.jpeg')}}" alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy"
+                                decoding="async" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -5120,137 +5118,203 @@
                     <h2 class="text-4xl md:text-6xl font-black text-on-surface tracking-tighter">Harga
                         Transparan,<br>Tanpa
                         Biaya Tersembunyi</h2>
-                    <p class="text-on-surface-variant text-xl">Bayar sekali, pakai selamanya. Semua fitur langsung
-                        aktif
+                    <p class="text-on-surface-variant text-xl">Investasi sekali untuk akses database buyer & supplier
+                        global tanpa batas.
                     </p>
                 </div>
 
-                <div class="max-w-md mx-auto">
-                    <!-- Lifetime Deal Card -->
+                <div class="max-w-2xl mx-auto">
+                    <!-- Mega Single Card -->
                     <div
-                        class="bg-primary rounded-[3rem] p-6 md:p-8 text-white shadow-2xl relative overflow-hidden group border border-white/10">
-                        <!-- Background Glow Overlay -->
-                        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[100px] -mr-32 -mt-32"></div>
+                        class="bg-primary rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-12 text-white shadow-2xl relative overflow-hidden ring-8 ring-primary/5">
+                        <!-- Background Effects -->
+                        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[120px] -mr-48 -mt-48"></div>
+                        <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 blur-[100px] -ml-48 -mb-48">
+                        </div>
 
                         <div class="relative z-10">
-                            <div class="flex justify-between items-start mb-10">
-                                <h3 class="text-xl font-bold text-white/90 uppercase tracking-wider">Wamaps Pro</h3>
+                            <div class="text-center mb-10">
                                 <span
-                                    class="bg-secondary text-on-secondary text-[10px] px-4 py-1.5 rounded-full font-black uppercase tracking-widest shadow-lg shadow-black/10">LIFETIME
-                                    DEAL</span>
-                            </div>
-
-                            <div class="space-y-1 mb-8">
-                                <div class="text-4xl md:text-5xl font-black tracking-tighter">Rp 149.000</div>
-                                <div class="flex items-center gap-3">
-                                    <span class="text-lg text-white/40 line-through font-medium">Rp 499.000</span>
+                                    class="bg-amber-400 text-primary text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest mb-4 inline-block shadow-lg">LIFETIME
+                                    ACCESS PROMO</span>
+                                <h3
+                                    class="text-3xl md:text-5xl font-black text-white tracking-tighter leading-none mb-4">
+                                    EXPORTER MEGA BUNDLE</h3>
+                                <div class="flex items-center justify-center gap-4 mb-2">
+                                    <div
+                                        class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-white">
+                                        Rp 239.000
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-center gap-3">
+                                    <span class="text-xl text-white/40 line-through font-medium">Rp 1.000.000</span>
                                     <span
-                                        class="bg-white/20 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/20">Hemat
-                                        70%</span>
+                                        class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold border border-white/20">Hemat
+                                        Rp 761.000</span>
                                 </div>
                             </div>
 
-                            <!-- Urgency Slot -->
+                            <!-- Bundle Selector Section -->
+                            <div class="bg-white/5 rounded-[2rem] p-6 mb-8 border border-white/10">
+                                <h4 class="text-sm font-bold uppercase tracking-widest text-white/60 mb-6 text-center">
+                                    Konfigurasi Bundle Pelanggan (Pilih Semua)</h4>
+
+                                <div class="space-y-4">
+                                    <!-- Bundle 1 -->
+                                    <label
+                                        class="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-white/10 border border-white/20 cursor-pointer hover:bg-white/15 transition-all group active:scale-[0.99]">
+                                        <div class="relative flex items-center justify-center">
+                                            <input type="checkbox" checked
+                                                class="peer h-6 w-6 cursor-pointer appearance-none rounded-lg border-2 border-white/30 bg-transparent transition-all checked:bg-amber-400 checked:border-amber-400">
+                                            <svg class="absolute h-4 w-4 text-primary opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <div class="font-bold text-base md:text-lg">Scraper Pro Bundle</div>
+                                            <p class="text-[10px] md:text-xs text-white/60 leading-tight">Google Maps &
+                                                LinkedIn Scraper + Unlimited Database</p>
+                                        </div>
+                                        <div class="text-right flex flex-col items-end">
+                                            <div class="text-[10px] line-through text-white/30">Rp 500.000</div>
+                                            <div
+                                                class="text-xs font-black text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded leading-none">
+                                                PROMO: Rp 0</div>
+                                        </div>
+                                    </label>
+
+                                    <!-- Bundle 2 -->
+                                    <label
+                                        class="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-2xl bg-white/10 border border-white/20 cursor-pointer hover:bg-white/15 transition-all group active:scale-[0.99]">
+                                        <div class="relative flex items-center justify-center">
+                                            <input type="checkbox" checked
+                                                class="peer h-6 w-6 cursor-pointer appearance-none rounded-lg border-2 border-white/30 bg-transparent transition-all checked:bg-amber-400 checked:border-amber-400">
+                                            <svg class="absolute h-4 w-4 text-primary opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"></polyline>
+                                            </svg>
+                                        </div>
+                                        <div class="flex-grow">
+                                            <div class="font-bold text-base md:text-lg">Marketing & Sales Bundle</div>
+                                            <p class="text-[10px] md:text-xs text-white/60 leading-tight">WA Broadcast +
+                                                Auto Post Grup Facebook</p>
+                                        </div>
+                                        <div class="text-right flex flex-col items-end">
+                                            <div class="text-[10px] line-through text-white/30">Rp 500.000</div>
+                                            <div
+                                                class="text-xs font-black text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded leading-none">
+                                                PROMO: Rp 0</div>
+                                        </div>
+                                    </label>
+
+
+                                </div>
+                            </div>
+
+                            <!-- Urgency Section -->
                             <div
-                                class="grid grid-cols-2 gap-4 mb-8 py-6 border-y border-white/10 uppercase tracking-tight text-[10px] font-bold">
-                                <div class="space-y-1">
-                                    <div class="text-amber-400 flex items-center gap-1 text-[11px]">
-                                        <span class="animate-pulse">🔥</span> 27 slot lagi
+                                class="flex flex-col md:flex-row items-center justify-between gap-6 mb-10 py-6 border-y border-white/10">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-12 h-12 bg-amber-400 text-primary rounded-2xl flex items-center justify-center shadow-lg animate-bounce">
+                                        <span class="font-black text-xl">🔥</span>
                                     </div>
-                                    <div class="text-white/80">di harga ini</div>
+                                    <div>
+                                        <div class="text-amber-400 font-black text-lg">SISA 5 SLOT TERAKHIR</div>
+                                        <div class="text-white/60 text-xs font-bold uppercase tracking-widest">Setelah
+                                            ini harga naik Rp 1jt</div>
+                                    </div>
                                 </div>
-                                <div class="text-right space-y-1">
-                                    <div class="text-white/80">Naik ke Rp 249.000</div>
-                                    <div class="text-white/80">setelahnya</div>
+
+                                <div class="text-center md:text-right">
+                                    <p class="text-[10px] uppercase tracking-widest font-bold text-white/60 mb-2">
+                                        Berakhir Dalam:</p>
+                                    <div class="flex gap-4 text-2xl font-black">
+                                        <span id="countdown-hours">00</span>
+                                        <span>:</span>
+                                        <span id="countdown-minutes">30</span>
+                                        <span>:</span>
+                                        <span id="countdown-seconds">00</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Progress Bar -->
+                            <script>
+                                function startCountdown() {
+                                    let h = 0, m = 30, s = 0;
+                                    const pad = (n) => n < 10 ? '0' + n : n;
+                                    setInterval(() => {
+                                        s--;
+                                        if (s < 0) { s = 59; m--; }
+                                        if (m < 0) { m = 59; h--; }
+                                        if (h < 0) { h = 0; m = 30; s = 0; }
+                                        document.getElementById('countdown-hours').innerText = pad(h);
+                                        document.getElementById('countdown-minutes').innerText = pad(m);
+                                        document.getElementById('countdown-seconds').innerText = pad(s);
+                                    }, 1000);
+                                }
+                                window.addEventListener('scroll', function () {
+                                    if (!window.countdownStarted) {
+                                        startCountdown();
+                                        window.countdownStarted = true;
+                                    }
+                                });
+                            </script>
 
-
-                            <!-- Features -->
-                            <ul class="space-y-5 mb-12">
-                                <li class="flex items-center gap-4 text-base font-medium group/item">
-                                    <div
-                                        class="w-6 h-6 bg-white/20 text-white rounded-full flex items-center justify-center border border-white/20 group-hover/item:scale-110 transition-transform">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                        </svg>
-                                    </div>
-                                    <span>Auto Scraping Google Maps</span>
-                                </li>
-                                <li class="flex items-center gap-4 text-base font-medium group/item">
-                                    <div
-                                        class="w-6 h-6 bg-white/20 text-white rounded-full flex items-center justify-center border border-white/20 group-hover/item:scale-110 transition-transform">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                        </svg>
-                                    </div>
-                                    <span>Auto Scraping Linkedln</span>
-                                </li>
-                                <li class="flex items-center gap-4 text-base font-medium group/item">
-                                    <div
-                                        class="w-6 h-6 bg-white/20 text-white rounded-full flex items-center justify-center border border-white/20 group-hover/item:scale-110 transition-transform">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                        </svg>
-                                    </div>
-                                    <span>WhatsApp Broadcast Otomatis</span>
-                                </li>
-                                <li class="flex items-center gap-4 text-base font-medium group/item">
-                                    <div
-                                        class="w-6 h-6 bg-white/20 text-white rounded-full flex items-center justify-center border border-white/20 group-hover/item:scale-110 transition-transform">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                        </svg>
-                                    </div>
-                                    <span>Auto Posting Grup Otomatis</span>
-                                </li>
-                                <li class="flex items-center gap-4 text-base font-medium group/item">
-                                    <div
-                                        class="w-6 h-6 bg-white/20 text-white rounded-full flex items-center justify-center border border-white/20 group-hover/item:scale-110 transition-transform">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                        </svg>
-                                    </div>
-                                    <span>Export Excel</span>
-                                </li>
-                                <li class="flex items-center gap-4 text-base font-medium group/item">
-                                    <div
-                                        class="w-6 h-6 bg-white/20 text-white rounded-full flex items-center justify-center border border-white/20 group-hover/item:scale-110 transition-transform">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                        </svg>
-                                    </div>
-                                    <span>Multiple Message Templates</span>
-                                </li>
-
-                                <li class="flex items-center gap-4 text-base font-medium group/item text-white/80">
-                                    <div
-                                        class="w-6 h-6 bg-white/5 text-white/30 rounded-full flex items-center justify-center border border-white/10 group-hover/item:scale-110 transition-transform">
-                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                        </svg>
-                                    </div>
-                                    <span>Free Update Selamanya</span>
-                                </li>
-                            </ul>
-                            <div class="mt-6">
-                                <a href="{{ route('checkout') }}"
-                                    class="w-full py-6 bg-white hover:bg-slate-100 text-primary rounded-2xl text-xl font-black shadow-2xl shadow-black/20 transition-all hover:-translate-y-1 active:scale-[0.98] flex items-center justify-center text-center">
-                                    Amankan Slot Promo Sekarang
+                            <div class="text-center group">
+                                <a href="https://winme.id/wamaps1/lp/checkout-wamaps"
+                                    class="w-full py-6 bg-white text-primary hover:bg-slate-50 rounded-[2rem] font-black text-2xl shadow-[0_20px_50px_rgba(255,255,255,0.2)] hover:-translate-y-2 active:scale-95 transition-all block mb-4">
+                                    Ambil Promo Sekarang
                                 </a>
+                                <p class="text-white/60 text-xs font-medium italic">Klik tombol untuk mengklaim akses
+                                    Lifetime sebelum promo Rp 0 hangus!</p>
                             </div>
-                            <div class="flex items-center justify-center gap-2 mt-4">
-                                <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
-                                </svg>
-                                <span class="text-white/90 font-bold text-sm">Garansi 7 Hari Uang Kembali</span>
+
+                            <div
+                                class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mt-12 pt-8 border-t border-white/10 text-[9px] md:text-[10px] font-bold text-white/50 text-center uppercase tracking-tighter">
+                                <div class="flex flex-col items-center gap-2">
+                                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                                    </svg>
+                                    7-Day Cashback
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                    </svg>
+                                    One-Time Payment
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                    </svg>
+                                    Lifetime Update
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                    </svg>
+                                    VIP Tech Support
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                    </svg>
+                    <span class="text-primary font-bold text-sm">Garansi 7 Hari Uang Kembali</span>
                 </div>
             </div>
         </section>
@@ -5362,13 +5426,14 @@
                             Siap Melipatgandakan Omzet Bisnis Anda Hari Ini?
                         </h2>
                         <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto font-medium">
-                            Jangan biarkan calon pelanggan Anda diambil kompetitor. Dapatkan akses <span
-                                class="text-white font-bold border-b-2 border-secondary">LIFETIME</span> Wamaps
+                            Jangan biarkan calon pelanggan Anda diambil kompetitor. Dapatkan <span
+                                class="text-white font-bold border-b-2 border-secondary">EXPORTER MEGA BUNDLE</span>
                             sekarang
-                            sebelum harga naik kembali!
+                            hanya seharga <span class="text-white font-black text-2xl">Rp 239.000</span> sebelum promo
+                            berakhir!
                         </p>
                         <div class="pt-6">
-                            <a href="{{ route('checkout') }}"
+                            <a href="https://winme.id/wamaps1/lp/checkout-wamaps"
                                 class="flex items-center justify-center text-center gap-4 bg-white hover:bg-slate-100 text-primary px-10 py-6 rounded-2xl text-xl md:text-2xl font-black shadow-2xl shadow-black/20 transition-all hover:-translate-y-1 active:scale-[0.98] group">
                                 Klaim Akses Lifetime Saya Sekarang
                                 <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform h-shrink-0"
@@ -5521,16 +5586,16 @@
                         Sekali</span>
                 </div>
                 <div class="flex items-baseline gap-2">
-                    <span class="text-xl font-black text-white leading-none">Rp 149.000</span>
-                    <span class="text-[10px] text-white/60 line-through leading-none">Rp 499.000</span>
+                    <span class="text-xl font-black text-white leading-none">Rp 239.000</span>
+                    <span class="text-[10px] text-white/60 line-through leading-none">Rp 1.000.000</span>
                 </div>
 
             </div>
 
             <!-- Action Button -->
-            <a href="{{ route('checkout') }}"
+            <a href="https://winme.id/wamaps1/lp/checkout-wamaps"
                 class="bg-green-600 hover:bg-green-500 text-white px-5 py-3 rounded-xl font-black text-xs flex items-center gap-2 shadow-xl shadow-green-900/10 active:scale-95 transition-all">
-                Klaim Sekarang
+                Ambil Promo Sekarang
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3">
                     </path>
