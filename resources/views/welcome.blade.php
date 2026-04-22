@@ -4489,7 +4489,8 @@
     <header>
         <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
             <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
-                <a href="/" class="flex items-center text-xl font-bold tracking-tight text-primary dark:text-white">
+                <a href="/"
+                    class="flex items-center text-xl font-bold tracking-tight text-primary dark:text-white">
                     <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true">
                         <rect width="32" height="32" rx="8" fill="#145efc" />
@@ -4507,7 +4508,7 @@
                     <a class="text-slate-600 dark:text-slate-400 font-medium hover:text-primary transition-colors"
                         href="#pricing">Pricing</a>
                 </div>
-                <a href="https://winme.id/wamaps1/lp/checkout-wamaps"
+                <a href="https://wamapss.com/checkout_ekspor"
                     class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold scale-95 active:duration-150 transition-all hover:bg-primary-container">Ambil
                     Promo</a>
             </div>
@@ -4531,7 +4532,7 @@
                         distributor, dan partner bisnis di seluruh dunia langsung dari Google Maps & LinkedIn.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://winme.id/wamaps1/lp/checkout-wamaps"
+                        <a href="https://wamapss.com/checkout_ekspor"
                             class="bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-all">
                             Ambil Promo Sekarang
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -4659,7 +4660,8 @@
                         </div>
                         <div>
                             <h3 class="font-bold text-lg text-on-surface">Digital Agency</h3>
-                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Mencari klien
+                            <p class="text-[10px] md:text-xs text-on-surface-variant leading-relaxed mt-2">Mencari
+                                klien
                                 potensial (UMKM, restoran, klinik) yang belum punya website atau digital presence.</p>
                         </div>
                     </div>
@@ -4849,7 +4851,8 @@
                         </div>
                         <h3 class="text-lg font-bold mb-3 text-on-surface group-hover:text-primary transition-colors">
                             Auto Scraping Google Maps</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">Pilih target negara & kota manapun di
+                        <p class="text-on-surface-variant text-sm leading-relaxed">Pilih target negara & kota manapun
+                            di
                             dunia. Ambil ribuan data buyer & partner bisnis sesuai industri Anda secara otomatis.</p>
                     </div>
 
@@ -5072,25 +5075,26 @@
                 <div class="grid lg:grid-cols-3 gap-8">
                     <div class="lg:col-span-1 space-y-6">
                         <h2 class="text-4xl font-bold">Apa Kata Mereka Yang Sudah Pakai Wamaps?</h2>
-                        <p class="text-on-surface-variant">Lebih dari 500+ eksportir dan pebisnis telah menghemat ribuan
+                        <p class="text-on-surface-variant">Lebih dari 500+ eksportir dan pebisnis telah menghemat
+                            ribuan
                             dollar biaya prospecting mereka dan menemukan partner global dengan Wamaps.</p>
 
                     </div>
                     <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                         <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                             onclick="document.getElementById('lightbox-modal').classList.remove('hidden'); document.getElementById('lightbox-img').src=this.querySelector('img').src;">
-                            <img src="{{asset('bukti1.jpeg')}}" alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy"
-                                decoding="async" class="w-full h-full object-cover">
+                            <img src="{{ asset('bukti1.jpeg') }}" alt="Testimoni WhatsApp pengguna Wamaps"
+                                loading="lazy" decoding="async" class="w-full h-full object-cover">
                         </div>
                         <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                             onclick="document.getElementById('lightbox-modal').classList.remove('hidden'); document.getElementById('lightbox-img').src=this.querySelector('img').src;">
-                            <img src="{{asset('bukti2.jpeg')}}" alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy"
-                                decoding="async" class="w-full h-full object-cover">
+                            <img src="{{ asset('bukti2.jpeg') }}" alt="Testimoni WhatsApp pengguna Wamaps"
+                                loading="lazy" decoding="async" class="w-full h-full object-cover">
                         </div>
                         <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                             onclick="document.getElementById('lightbox-modal').classList.remove('hidden'); document.getElementById('lightbox-img').src=this.querySelector('img').src;">
-                            <img src="{{asset('bukti3.jpeg')}}" alt="Testimoni WhatsApp pengguna Wamaps" loading="lazy"
-                                decoding="async" class="w-full h-full object-cover">
+                            <img src="{{ asset('bukti3.jpeg') }}" alt="Testimoni WhatsApp pengguna Wamaps"
+                                loading="lazy" decoding="async" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -5201,7 +5205,8 @@
                                         </div>
                                         <div class="flex-grow">
                                             <div class="font-bold text-base md:text-lg">Marketing & Sales Bundle</div>
-                                            <p class="text-[10px] md:text-xs text-white/60 leading-tight">WA Broadcast +
+                                            <p class="text-[10px] md:text-xs text-white/60 leading-tight">WA Broadcast
+                                                +
                                                 Auto Post Grup Facebook</p>
                                         </div>
                                         <div class="text-right flex flex-col items-end">
@@ -5246,19 +5251,31 @@
 
                             <script>
                                 function startCountdown() {
-                                    let h = 0, m = 30, s = 0;
+                                    let h = 0,
+                                        m = 30,
+                                        s = 0;
                                     const pad = (n) => n < 10 ? '0' + n : n;
                                     setInterval(() => {
                                         s--;
-                                        if (s < 0) { s = 59; m--; }
-                                        if (m < 0) { m = 59; h--; }
-                                        if (h < 0) { h = 0; m = 30; s = 0; }
+                                        if (s < 0) {
+                                            s = 59;
+                                            m--;
+                                        }
+                                        if (m < 0) {
+                                            m = 59;
+                                            h--;
+                                        }
+                                        if (h < 0) {
+                                            h = 0;
+                                            m = 30;
+                                            s = 0;
+                                        }
                                         document.getElementById('countdown-hours').innerText = pad(h);
                                         document.getElementById('countdown-minutes').innerText = pad(m);
                                         document.getElementById('countdown-seconds').innerText = pad(s);
                                     }, 1000);
                                 }
-                                window.addEventListener('scroll', function () {
+                                window.addEventListener('scroll', function() {
                                     if (!window.countdownStarted) {
                                         startCountdown();
                                         window.countdownStarted = true;
@@ -5267,7 +5284,7 @@
                             </script>
 
                             <div class="text-center group">
-                                <a href="https://winme.id/wamaps1/lp/checkout-wamaps"
+                                <a href="https://wamapss.com/checkout_ekspor"
                                     class="w-full py-6 bg-white text-primary hover:bg-slate-50 rounded-[2rem] font-black text-2xl shadow-[0_20px_50px_rgba(255,255,255,0.2)] hover:-translate-y-2 active:scale-95 transition-all block mb-4">
                                     Ambil Promo Sekarang
                                 </a>
@@ -5433,7 +5450,7 @@
                             berakhir!
                         </p>
                         <div class="pt-6">
-                            <a href="https://winme.id/wamaps1/lp/checkout-wamaps"
+                            <a href="https://wamapss.com/checkout_ekspor"
                                 class="flex items-center justify-center text-center gap-4 bg-white hover:bg-slate-100 text-primary px-10 py-6 rounded-2xl text-xl md:text-2xl font-black shadow-2xl shadow-black/20 transition-all hover:-translate-y-1 active:scale-[0.98] group">
                                 Klaim Akses Lifetime Saya Sekarang
                                 <svg class="w-6 h-6 group-hover:translate-x-2 transition-transform h-shrink-0"
@@ -5487,8 +5504,8 @@
                 <!-- Brand Info -->
                 <div class="space-y-6">
                     <div class="flex items-center text-2xl font-black text-primary">
-                        <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true">
+                        <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <rect width="32" height="32" rx="8" fill="#145efc" />
                             <circle cx="16" cy="16" r="9" stroke="white" stroke-width="2.5" />
                             <circle cx="16" cy="16" r="4.5" stroke="white" stroke-width="2.5" />
@@ -5562,7 +5579,8 @@
             </div>
 
             <!-- Bottom Footer -->
-            <div class="border-t border-slate-200/60 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
+            <div
+                class="border-t border-slate-200/60 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
                 <div class="text-on-surface-variant text-sm text-center lg:text-left">
                     © 2026 Wamaps. All rights reserved.
                 </div>
@@ -5593,22 +5611,23 @@
             </div>
 
             <!-- Action Button -->
-            <a href="https://winme.id/wamaps1/lp/checkout-wamaps"
+            <a href="https://wamapss.com/checkout_ekspor"
                 class="bg-green-600 hover:bg-green-500 text-white px-5 py-3 rounded-xl font-black text-xs flex items-center gap-2 shadow-xl shadow-green-900/10 active:scale-95 transition-all">
                 Ambil Promo Sekarang
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3">
                     </path>
                 </svg>
             </a>
         </div>
     </div>
     <script>
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-                ! function (f, b, e, v, n, t, s) {
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                ! function(f, b, e, v, n, t, s) {
                     if (f.fbq) return;
-                    n = f.fbq = function () {
+                    n = f.fbq = function() {
                         n.callMethod ?
                             n.callMethod.apply(n, arguments) : n.queue.push(arguments)
                     };
