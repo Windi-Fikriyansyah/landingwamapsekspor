@@ -16,7 +16,7 @@
         rel="stylesheet" media="print" onload="this.media='all'" />
 
 
-    <link rel="preload" href="{{ asset('thumnail.webp') }}" as="image" fetchpriority="high">
+    <link rel="preload" href="https://img.youtube.com/vi/dcmFOYiRgII/maxresdefault.jpg" as="image" fetchpriority="high">
 
     <style>
         .lazy-section {
@@ -853,6 +853,10 @@
 
             .aspect-\[4\/3\] {
                 aspect-ratio: 4/3
+            }
+
+            .aspect-video {
+                aspect-ratio: 16 / 9
             }
 
             .size-2 {
@@ -4489,8 +4493,7 @@
     <header>
         <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl">
             <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
-                <a href="/"
-                    class="flex items-center text-xl font-bold tracking-tight text-primary dark:text-white">
+                <a href="/" class="flex items-center text-xl font-bold tracking-tight text-primary dark:text-white">
                     <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true">
                         <rect width="32" height="32" rx="8" fill="#145efc" />
@@ -4521,11 +4524,11 @@
                 <div class="space-y-8">
                     <span
                         class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-widest uppercase">Dipakai
-                        500+ Pebisnis Indonesia</span>
+                        500+ Eksportir Indonesia</span>
                     <h1 class="text-5xl lg:text-6xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
-                        Temukan Ribuan <span class="text-secondary">Buyer & Supplier Internasional</span>
-                        Hanya Dalam Hitungan
-                        <span class="text-primary">Detik</span>
+                        Dapatkan 1000+ <span class="text-secondary">Kontak Buyer Ekspor</span>
+                        Terverifikasi Dalam Hitungan
+                        <span class="text-primary">Menit</span>
                     </h1>
                     <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
                         Cara termudah bagi Eksportir untuk ekspansi pasar global. Temukan data kontak importir,
@@ -4549,7 +4552,7 @@
                         <div
                             class="flex items-center gap-1.5 px-3 py-1.5 bg-secondary/[0.08] text-secondary rounded-full border border-secondary/10">
                             <span class="flex-shrink-0 text-xs sm:text-base font-black">✓</span>
-                            <span class="leading-tight">Mengambil ribuan leads bisnis</span>
+                            <span class="leading-tight">Mengambil ribuan prospek buyer</span>
                         </div>
                         <div
                             class="flex items-center gap-1.5 px-3 py-1.5 bg-secondary/[0.08] text-secondary rounded-full border border-secondary/10">
@@ -4580,27 +4583,13 @@
                 </div>
                 <div class="relative">
                     <div class="absolute inset-0 bg-primary/5 rounded-3xl -rotate-2 scale-105"></div>
-                    <div class="relative bg-surface-container-lowest rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/10 group cursor-pointer"
-                        onclick="const v = this.querySelector('video'); const o = this.querySelector('.play-overlay'); if(v.paused){v.play(); v.controls=true; o.classList.add('hidden')} else {v.pause()}">
-                        <video class="w-full h-auto block focus:outline-none" poster="{{ asset('thumnail.webp') }}"
-                            preload="metadata"
-                            onended="this.controls=false; this.parentElement.querySelector('.play-overlay').classList.remove('hidden')">
-                            <source src="https://ik.imagekit.io/bzq0b2kjq/0401.mp4?updatedAt=1775027577346"
-                                type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-
-                        <!-- Play Button Overlay -->
-                        <div
-                            class="play-overlay absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-all duration-300">
-                            <div
-                                class="w-16 h-16 md:w-20 md:h-20 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-2xl scale-90 group-hover:scale-100 transition-transform duration-300 border-4 border-white/20">
-                                <svg class="w-10 h-10 md:w-12 md:h-12 fill-current ml-1" viewBox="0 0 24 24"
-                                    aria-hidden="true">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                            </div>
-                        </div>
+                    <div class="relative bg-surface-container-lowest rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/10 aspect-video">
+                        <iframe class="w-full h-full"
+                            src="https://www.youtube.com/embed/dcmFOYiRgII?si=XQICm5LD8VN37lch"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -5275,7 +5264,7 @@
                                         document.getElementById('countdown-seconds').innerText = pad(s);
                                     }, 1000);
                                 }
-                                window.addEventListener('scroll', function() {
+                                window.addEventListener('scroll', function () {
                                     if (!window.countdownStarted) {
                                         startCountdown();
                                         window.countdownStarted = true;
@@ -5504,8 +5493,8 @@
                 <!-- Brand Info -->
                 <div class="space-y-6">
                     <div class="flex items-center text-2xl font-black text-primary">
-                        <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg class="w-8 h-8 mr-2" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
                             <rect width="32" height="32" rx="8" fill="#145efc" />
                             <circle cx="16" cy="16" r="9" stroke="white" stroke-width="2.5" />
                             <circle cx="16" cy="16" r="4.5" stroke="white" stroke-width="2.5" />
@@ -5579,8 +5568,7 @@
             </div>
 
             <!-- Bottom Footer -->
-            <div
-                class="border-t border-slate-200/60 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
+            <div class="border-t border-slate-200/60 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
                 <div class="text-on-surface-variant text-sm text-center lg:text-left">
                     © 2026 Wamaps. All rights reserved.
                 </div>
@@ -5615,19 +5603,18 @@
                 class="bg-green-600 hover:bg-green-500 text-white px-5 py-3 rounded-xl font-black text-xs flex items-center gap-2 shadow-xl shadow-green-900/10 active:scale-95 transition-all">
                 Ambil Promo Sekarang
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3">
                     </path>
                 </svg>
             </a>
         </div>
     </div>
     <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                ! function(f, b, e, v, n, t, s) {
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                ! function (f, b, e, v, n, t, s) {
                     if (f.fbq) return;
-                    n = f.fbq = function() {
+                    n = f.fbq = function () {
                         n.callMethod ?
                             n.callMethod.apply(n, arguments) : n.queue.push(arguments)
                     };
