@@ -5146,7 +5146,7 @@
                                     <span class="text-xl text-white/40 line-through font-medium">Rp 1.000.000</span>
                                     <span
                                         class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold border border-white/20">Hemat
-                                        Rp 761.000</span>
+                                        Rp 821.000</span>
                                 </div>
                             </div>
 
